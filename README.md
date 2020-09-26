@@ -16,7 +16,6 @@
 2. Generate models and/or migrations according to the data architecture diagram, including associations and validations.
 3. Set up Active Storage for images/icons. Group model should have_one_attached :icon.
 3. Setup and migrate databases.
-4. 
 
 ## Project Ideas 
 
