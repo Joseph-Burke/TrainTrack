@@ -1,3 +1,4 @@
 class Transaction < ApplicationRecord
-  belongs_to :author_id
+  belongs_to :author, class_name: 'User'
+  belongs_to :group
 end
