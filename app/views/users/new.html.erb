@@ -1,0 +1,7 @@
+<h1>Hello from the sign-up view!</h1>
+
+<%= form_with(model: @user) do |form| %>
+  <%= form.label :name, "Enter your name to sign up" %>
+  <%= form.text_field :name %>
+  <%= form.submit "Submit" %>
+<% end %>

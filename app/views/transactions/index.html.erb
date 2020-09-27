@@ -1,0 +1,9 @@
+<h1>Hello from the Transaction index view!</h1>
+
+<ul>
+  <% @transactions.each do |transaction| %>
+    <li>
+      <%= transaction.name %>
+    </li>
+  <% end %>
+</ul>
