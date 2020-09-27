@@ -1,1 +1,7 @@
 <h1>Hello from the new session view!</h1>
+
+<%= form_with(url: "/login", method: 'post') do %>
+  <%= label_tag :name, "Enter your name:" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag "Enter" %>
+<% end %>

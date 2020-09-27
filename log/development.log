@@ -1014,3 +1014,219 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms | Allocations: 17297)
 
 
+Started GET "/login" for ::1 at 2020-09-27 09:28:00 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 6056)
+
+
+Started GET "/login" for ::1 at 2020-09-27 09:30:23 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1063)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2264)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Hello from the new session view!</h1>
+
+<%= form_with (url: "/login", method: 'post') %>
+  <%= label_tag :name, "Enter your name" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag %>
+<% end %>
+):
+1:    <h1>Hello from the new session view!</h1>
+2:    
+3:    <%= form_with (url: "/login", method: 'post') %>
+4:      <%= label_tag :name, "Enter your name" %>
+5:      <%= text_field_tag :name %>
+6:      <%= submit_tag %>
+7:    <% end %>
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/login" for ::1 at 2020-09-27 09:30:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1058)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2254)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Hello from the new session view!</h1>
+
+<%= form_with (url: "/login", method: 'post') do %>
+  <%= label_tag :name, "Enter your name" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag %>
+<% end %>
+):
+1:    <h1>Hello from the new session view!</h1>
+2:    
+3:    <%= form_with (url: "/login", method: 'post') do %>
+4:      <%= label_tag :name, "Enter your name" %>
+5:      <%= text_field_tag :name %>
+6:      <%= submit_tag %>
+7:    <% end %>
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/login" for ::1 at 2020-09-27 09:30:59 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1045)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1509)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Hello from the new session view!</h1>
+
+<%= form_with (url: "/login", method: 'post') do %>
+  <%= label_tag :name, "Enter your name" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag %>
+<% end %>
+):
+1:    <h1>Hello from the new session view!</h1>
+2:    
+3:    <%= form_with (url: "/login", method: 'post') do %>
+4:      <%= label_tag :name, "Enter your name" %>
+5:      <%= text_field_tag :name %>
+6:      <%= submit_tag %>
+7:    <% end %>
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/login" for ::1 at 2020-09-27 09:31:02 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1045)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1509)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Hello from the new session view!</h1>
+
+<%= form_with (url: "/login", method: 'post') do %>
+  <%= label_tag :name, "Enter your name" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag %>
+<% end %>
+):
+1:    <h1>Hello from the new session view!</h1>
+2:    
+3:    <%= form_with (url: "/login", method: 'post') do %>
+4:      <%= label_tag :name, "Enter your name" %>
+5:      <%= text_field_tag :name %>
+6:      <%= submit_tag %>
+7:    <% end %>
+  
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:3: syntax error, unexpected tLABEL, expecting ')'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ',', expecting `end'
+app/views/sessions/new.html.erb:3: syntax error, unexpected ')', expecting `end'
+app/views/sessions/new.html.erb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/login" for ::1 at 2020-09-27 09:31:20 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 379)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 5856)
+
+
+Started GET "/login" for ::1 at 2020-09-27 09:31:43 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 5814)
+
+
