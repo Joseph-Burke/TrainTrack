@@ -111,3 +111,43 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 22ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 2401)
 
 
+Started GET "/users" for ::1 at 2020-09-27 09:10:53 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 1954ms
+Built at: 09/27/2020 09:10:57
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4264ms (Views: 4263.1ms | ActiveRecord: 0.0ms | Allocations: 28512)
+
+
+Started GET "/groups" for ::1 at 2020-09-27 09:11:13 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  Rendered groups/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 6598)
+
+
+Started GET "/users" for ::1 at 2020-09-27 09:11:18 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4476)
+
+
