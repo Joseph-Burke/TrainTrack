@@ -19,6 +19,11 @@
 
 NOTE: the data architecture is a bit of a mess right now. The table I have been given to mirror is not very good. Continue work for now, but I may need to return later to make adjustments.
 
+### feature/routes_and_actions
+1. Set up primary routes for the application.
+2. Create corresponding controller actions for these main routes.
+3. Add a sessions controller to handle log-ins.
+
 ## Project Ideas 
 
 Anything that you can share with other people and group by some category.
