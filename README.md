@@ -24,11 +24,11 @@ NOTE: the data architecture is a bit of a mess right now. The table I have been 
 1. Set up primary routes for the application.
 2. Create corresponding controller actions for these main routes.
 
-Routes and actions to deal with now.
-User - new, create, index, show
-Group - new, create, index, show
-Transaction - new, create, index, show
-Session - new, create, destroy
+Routes and actions to deal with now:
+~~User - new, create, index, show~~
+~~Group - new, create, index, show~~
+~~Transaction - new, create, index, show~~
+~~Session - new, create, destroy~~
 
 ## Project Ideas 
 

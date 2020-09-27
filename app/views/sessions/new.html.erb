@@ -5,3 +5,12 @@
   <%= text_field_tag :name %>
   <%= submit_tag "Enter" %>
 <% end %>
+
+<% unless session[:user_id].nil? %>
+  <h3>
+    Currently logged in as 
+    <%= User.find(session[:user_id]).name %>
+  </h3>
+  <%= button_to "Log Out", logout_path, method: "delete" %>
+
+<% end %>
