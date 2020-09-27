@@ -1,0 +1,7 @@
+<h1>Hello from the new group view!</h1>
+
+<%= form_with(model: @group) do |form| %>
+  <%= form.label :name, "Enter the name of your new group" %>
+  <%= form.text_field :name %>
+  <%= form.submit "Submit" %>
+<% end %>

@@ -20,9 +20,15 @@
 NOTE: the data architecture is a bit of a mess right now. The table I have been given to mirror is not very good. Continue work for now, but I may need to return later to make adjustments.
 
 ### feature/routes_and_actions
+1. ~~Add a sessions controller to handle log-ins.~~
 1. Set up primary routes for the application.
 2. Create corresponding controller actions for these main routes.
-3. Add a sessions controller to handle log-ins.
+
+Routes and actions to deal with now.
+User - new, create, index, show
+Group - new, create, index, show
+Transaction - new, create, index, show
+Session - new, create, destroy
 
 ## Project Ideas 
 
