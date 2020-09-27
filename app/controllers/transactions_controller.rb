@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  def index 
+  def index
     @transactions = Transaction.all
   end
 
@@ -21,5 +21,4 @@ class TransactionsController < ApplicationController
   def transaction_params
     params.require(:transaction).permit(:user_id, :group_id, :name, :amount)
   end
-
 end

@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  def index 
+  def index
     @groups = Group.all
   end
 
@@ -21,5 +21,4 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name)
   end
-
 end
