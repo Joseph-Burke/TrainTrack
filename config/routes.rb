@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :groups, only: [:index]
   resources :transactions, only: [:index]
+  get '/login', to: 'sessions#new'
 end
