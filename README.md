@@ -21,14 +21,16 @@ NOTE: the data architecture is a bit of a mess right now. The table I have been 
 
 ### feature/routes_and_actions
 1. ~~Add a sessions controller to handle log-ins.~~
-1. Set up primary routes for the application.
-2. Create corresponding controller actions for these main routes.
+1. ~~Set up primary routes for the application.~~
+2. ~~Create corresponding controller actions for these main routes.~~
+    - ~~User - new, create, index, show~~
+    - ~~Group - new, create, index, show~~
+    - ~~Transaction - new, create, index, show~~
+    - ~~Session - new, create, destroy~~
 
-Routes and actions to deal with now:
-~~User - new, create, index, show~~
-~~Group - new, create, index, show~~
-~~Transaction - new, create, index, show~~
-~~Session - new, create, destroy~~
+CURRENT STATE OF PROJECT: 
+  - Main routes are all functional, allowing Users/Groups/Transactions to be displayed and created.
+  - Sessions can also be started and destroyed, allowing a user to log in.
 
 ## Project Ideas 
 
