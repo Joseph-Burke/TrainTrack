@@ -14,8 +14,10 @@
 ### feature/data_architecture
 1. ~~Create a data architecture diagram and add it to the docs folder.~~
 2. ~~Generate models and/or migrations according to the data architecture diagram, including associations and validations.~~
-3. Set up Active Storage for images/icons. Group model should have_one_attached :icon.
-3. Setup and migrate databases.
+3. ~~Set up Active Storage for images/icons. Group model should have_one_attached :icon.~~
+3. ~~Setup and migrate databases.~~
+
+NOTE: the data architecture is a bit of a mess right now. The table I have been given to mirror is not very good. Continue work for now, but I may need to return later to make adjustments.
 
 ## Project Ideas 
 
