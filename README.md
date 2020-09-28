@@ -32,8 +32,8 @@ NOTE: the data architecture is a bit of a mess right now. The table I have been 
 This branch will go through the user story and ensure that all functionality is in place at each part of the application. The following aspects of the user story should be in place by the conclusion of this feature branch.
 
   - Create a helper method to access the current_user
-1. Ensure that all attempts to access the application will redirect to the log in page if the user has not yet logged in.
 2. Ensure that validations take place to deal with the scenario of a user inputting a name that is not an existing user's.
+1. Ensure that all attempts to access the application will redirect to the log in page if the user has not yet logged in.
 3. Ensure that validations exist that will prevent two users from having the same name.
 4. The user will then be presented with a User profile page that includes links to:
   - All my transactions
