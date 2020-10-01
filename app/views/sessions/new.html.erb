@@ -6,11 +6,11 @@
   <%= submit_tag "Enter" %>
 <% end %>
 
-<% unless session[:user_id].nil? %>
+<% unless logged_in? %>
   <h3>
     Currently logged in as 
-    <%= User.find(session[:user_id]).name %>
+    <%= current_user.name %>
+    <%= current_user_id %>
   </h3>
   <%= button_to "Log Out", logout_path, method: "delete" %>
-
 <% end %>

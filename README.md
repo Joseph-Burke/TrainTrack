@@ -31,9 +31,10 @@ NOTE: the data architecture is a bit of a mess right now. The table I have been 
 ### feature/user_story
 This branch will go through the user story and ensure that all functionality is in place at each part of the application. The following aspects of the user story should be in place by the conclusion of this feature branch.
 
-  - Create a helper method to access the current_user
-2. Ensure that validations take place to deal with the scenario of a user inputting a name that is not an existing user's.
+  - ~~Create a helper method to access the current_user~~
 1. Ensure that all attempts to access the application will redirect to the log in page if the user has not yet logged in.
+  - 
+2. Ensure that validations take place to deal with the scenario of a user inputting a name that is not an existing user's.
 3. Ensure that validations exist that will prevent two users from having the same name.
 4. The user will then be presented with a User profile page that includes links to:
   - All my transactions
@@ -55,6 +56,9 @@ This branch will go through the user story and ensure that all functionality is 
   - The author of each transaction is also visible.
 8. When a user opens "Create new group" or "Add new transaction":
   - A form with all necessary fields is displayed.
+
+### feature/styles
+
 
 CURRENT STATE OF PROJECT: 
   - Main routes are all functional, allowing Users/Groups/Transactions to be displayed and created.
