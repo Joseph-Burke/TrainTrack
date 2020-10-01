@@ -1,16 +1,10 @@
-<h1>Hello from the new session view!</h1>
+<nav class="navbar">
+  <p></p>
+  <h1>LOGIN</h1>
+  <a href="#"></a>
+</nav>
 
 <%= form_with(url: "/login", method: 'post') do %>
-  <%= label_tag :name, "Enter your name:" %>
-  <%= text_field_tag :name %>
+  <%= text_field_tag :name, nil, placeholder: "Name" %>
   <%= submit_tag "Enter" %>
-<% end %>
-
-<% unless session[:user_id].nil? %>
-  <h3>
-    Currently logged in as 
-    <%= User.find(session[:user_id]).name %>
-  </h3>
-  <%= button_to "Log Out", logout_path, method: "delete" %>
-
 <% end %>

@@ -28,6 +28,12 @@ NOTE: the data architecture is a bit of a mess right now. The table I have been 
     - ~~Transaction - new, create, index, show~~
     - ~~Session - new, create, destroy~~
 
+
+### feature/styles
+
+
+
+
 CURRENT STATE OF PROJECT: 
   - Main routes are all functional, allowing Users/Groups/Transactions to be displayed and created.
   - Sessions can also be started and destroyed, allowing a user to log in.
