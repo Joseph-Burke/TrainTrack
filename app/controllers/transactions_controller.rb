@@ -1,24 +1,31 @@
 class TransactionsController < ApplicationController
   def index
-    @transactions = Transaction.all
+    redirect_to root_path if session[:user_id].nil?
+    @transactions = Transaction.where(user_id: session[:user_id])
+    @total_transactions_value = @transactions.sum("amount")
   end
 
   def new
-    @transaction = Transaction.new
+    redirect_to root_path if session[:user_id].nil?
+    user = User.find(session[:user_id])
+    @transaction = user.transactions.build
+    @groups = Group.all
   end
 
   def create
-    @transaction = Transaction.new(transaction_params)
-    @transaction.save
+    redirect_to root_path if session[:user_id].nil?
+    transaction = Transaction.new(transaction_params)
+    transaction.save
   end
 
   def show
+    redirect_to root_path if session[:user_id].nil?
     @transaction = Transaction.find(params[:id])
   end
 
   private
 
   def transaction_params
-    params.require(:transaction).permit(:user_id, :group_id, :name, :amount)
+    params.require(:transaction).permit(:group_id, :name, :amount)
   end
 end

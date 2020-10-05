@@ -1,9 +1,12 @@
 <h1>Hello from the Transaction index view!</h1>
 
+<h3>
+  <%= "Your transactions total: #{@total_transactions_value}." %>
+</h3>
 <ul>
   <% @transactions.each do |transaction| %>
     <li>
-      <%= transaction.name %>
+      <%= "#{transaction.name}, #{transaction.amount}" %>
     </li>
   <% end %>
 </ul>
