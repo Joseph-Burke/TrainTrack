@@ -1,10 +1,12 @@
 <h1>Hello from the new Transaction view!</h1>
 
 <%= form_with(model: @transaction) do |form| %>
-  <%= form.label :user_id, "Enter the user_id of the new transaction" %>
-  <%= form.text_field :user_id %></br>
-  <%= form.label :group_id, "Enter the group_id of the new transaction" %>
-  <%= form.text_field :group_id %></br>
+  <p>Select the group that this transaction belongs to:</p>
+  <% @groups.each do |group| %>
+    <%= form.label :group, group.name %>
+    <%= form.radio_button(:group, group.id) %>
+  <% end %>
+  </br>
   <%= form.label :name, "Enter the name of the new transaction" %>
   <%= form.text_field :name %></br>
   <%= form.label :amount, "Enter the amount for the new transaction" %>

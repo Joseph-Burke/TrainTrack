@@ -7,7 +7,9 @@ class TransactionsController < ApplicationController
 
   def new
     redirect_to root_path if session[:user_id].nil?
-    @transaction = Transaction.new
+    @user = User.find(session[:user_id])
+    @transaction = @user.transactions.build
+    @groups = Group.all
   end
 
   def create

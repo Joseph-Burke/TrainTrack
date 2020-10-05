@@ -5638,3 +5638,191 @@ Processing by TransactionsController#new as HTML
 Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5544)
 
 
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:37:55 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 0.9ms | Allocations: 13664)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:47:13 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1282)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms | Allocations: 3324)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+    4:   <%= form.label :group_id, "Select the group that this transaction belongs to" %>
+    5:   <%= form.text_field :group_id %></br>
+    6: 
+    7:   <%= form.radio_button :group %>
+    8: 
+    9: 
+   10: 
+  
+app/views/transactions/new.html.erb:7
+app/views/transactions/new.html.erb:3
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:47:43 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 3269)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.4ms | Allocations: 9397)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:48:39 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2481)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 4420)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "group 1":String):
+    4:   <%= form.label :group_id, "Select the group that this transaction belongs to" %>
+    5:   <%= form.text_field :group_id %></br>
+    6: 
+    7:   <%= form.radio_button :group, "group 1", "group 1" %>
+    8: 
+    9: 
+   10: 
+  
+app/views/transactions/new.html.erb:7
+app/views/transactions/new.html.erb:3
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:48:51 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.3ms | Allocations: 6957)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:58:58 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1137)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.8ms | Allocations: 3177)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Hello from the new Transaction view!</h1>
+
+<%= form_with(model: @transaction) do |form| %>
+  <%= form.label :group_id, "Select the group that this transaction belongs to" %>
+  <%= form.text_field :group_id %></br>
+
+  <%= form.radio_button (:group, "group 1") %>
+
+
+
+  <%= form.label :name, "Enter the name of the new transaction" %>
+  <%= form.text_field :name %></br>
+  <%= form.label :amount, "Enter the amount for the new transaction" %>
+  <%= form.text_field :amount %></br>
+  <%= form.submit "Submit" %>
+<% end %>
+):
+1:    <h1>Hello from the new Transaction view!</h1>
+2:    
+3:    <%= form_with(model: @transaction) do |form| %>
+4:      <%= form.label :group_id, "Select the group that this transaction belongs to" %>
+5:      <%= form.text_field :group_id %></br>
+6:    
+7:      <%= form.radio_button (:group, "group 1") %>
+8:    
+9:    
+10:    
+11:      <%= form.label :name, "Enter the name of the new transaction" %>
+12:      <%= form.text_field :name %></br>
+13:      <%= form.label :amount, "Enter the amount for the new transaction" %>
+14:      <%= form.text_field :amount %></br>
+15:      <%= form.submit "Submit" %>
+16:    <% end %>
+  
+app/views/transactions/new.html.erb:7: syntax error, unexpected ',', expecting ')'
+app/views/transactions/new.html.erb:7: syntax error, unexpected ')', expecting `end'
+app/views/transactions/new.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/transactions/new.html.erb:7: syntax error, unexpected ',', expecting ')'
+app/views/transactions/new.html.erb:7: syntax error, unexpected ')', expecting `end'
+app/views/transactions/new.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/transactions/new.html.erb:7: syntax error, unexpected ',', expecting ')'
+app/views/transactions/new.html.erb:7: syntax error, unexpected ')', expecting `end'
+app/views/transactions/new.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/transactions/new.html.erb:7: syntax error, unexpected ',', expecting ')'
+app/views/transactions/new.html.erb:7: syntax error, unexpected ')', expecting `end'
+app/views/transactions/new.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/transactions/new.html.erb:7: syntax error, unexpected ',', expecting ')'
+app/views/transactions/new.html.erb:7: syntax error, unexpected ')', expecting `end'
+app/views/transactions/new.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/transactions/new.html.erb:7: syntax error, unexpected ',', expecting ')'
+app/views/transactions/new.html.erb:7: syntax error, unexpected ')', expecting `end'
+app/views/transactions/new.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:59:07 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.2ms | Allocations: 6963)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:59:31 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 795)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 7020)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 09:59:32 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 542)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 5858)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:02:23 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3586)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 13.4ms | ActiveRecord: 10.3ms | Allocations: 18899)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:02:35 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 1.1ms | Allocations: 7689)
+
+
