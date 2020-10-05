@@ -3,8 +3,8 @@
 <%= form_with(model: @transaction) do |form| %>
   <p>Select the group that this transaction belongs to:</p>
   <% @groups.each do |group| %>
-    <%= form.label :group, group.name %>
-    <%= form.radio_button(:group, group.id) %>
+    <%= form.label :group_id, group.name %>
+    <%= form.radio_button(:group_id, group.id) %>
   <% end %>
   </br>
   <%= form.label :name, "Enter the name of the new transaction" %>

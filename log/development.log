@@ -5826,3 +5826,673 @@ Processing by TransactionsController#new as HTML
 Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 1.1ms | Allocations: 7689)
 
 
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:08:34 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1445)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.9ms | Allocations: 7769)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:08:54 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"TcX6f2BYs3Ke0cKuy8yobeh4ghNeoSgnNlpggMTCG0YgdRqHYKtivT42Kcmp+4ZvXsztZ2YD7FhWXAC03OX2mQ==", "transaction"=>{"group"=>"2", "name"=>"test transaction", "amount"=>"15"}, "commit"=>"Submit"}
+[31mUnpermitted parameter: :group[0m
+No template found for TransactionsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.0ms | Allocations: 3973)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:08:55 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 6515)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:09:33 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 0.5ms | Allocations: 7678)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:09:39 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"pi0eLjj0Xb0h+Q5TSXD2SNY4Dg+GrDmSEXpXApb3BIzLnf7WOAeMcoEe5TQrR9hKYIxhe74O/e1xfDc2jtDpUw==", "transaction"=>{"group_id"=>"2", "name"=>"dao", "amount"=>"3"}, "commit"=>"Submit"}
+No template found for TransactionsController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 2771)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:09:40 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.7ms | Allocations: 6518)
+
+
+Started GET "/transactions/1" for ::1 at 2020-10-05 10:09:54 +0100
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23:in `show'
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 97)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 1.4ms | Allocations: 5514)
+
+
+Started GET "/transactions/2" for ::1 at 2020-10-05 10:09:57 +0100
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23:in `show'
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 5138)
+
+
+Started GET "/transactions/3" for ::1 at 2020-10-05 10:09:59 +0100
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:23:in `show'
+  Rendering transactions/show.html.erb within layouts/application
+  Rendered transactions/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 0.3ms | Allocations: 5143)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 10:10:05 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  Rendered groups/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1223)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2286)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Hello from the groups index view!</h1>
+
+<%= button_to "Create a new group", new_group_path, method: 'get' %>
+
+<ul>
+  <% @groups.each do |group| %>
+    <% date = group.created_at.to_date %>
+    <% week = Date::DAYNAMES %>
+    <% day_of_week = week[date.wday] %>
+    <% day_of_month = date.mday.to_s %>
+    <% month = Date::MONTHNAMES[date.month] %>
+    <% year = date.year %>
+    <% case day_of_month.to_i.digits[0]%>
+    <% when 1 %>z
+      <% then day_of_month << "st" %>
+    <% when 2 %>
+      <% then day_of_month << "nd" %>
+    <% when 3 %>
+      <% then day_of_month << "rd" %>
+    <% else %>
+      <% day_of_month << "th" %>
+    <% end %>
+    <li>
+      <%= link_to group.name, group_path(group) %>
+      <%= "- created on #{day_of_week}, #{day_of_month} #{month} #{year}" %>
+    </li>
+  <% end %>
+</ul>
+):
+1:    <h1>Hello from the groups index view!</h1>
+2:    
+3:    <%= button_to "Create a new group", new_group_path, method: 'get' %>
+4:    
+5:    <ul>
+6:      <% @groups.each do |group| %>
+7:        <% date = group.created_at.to_date %>
+8:        <% week = Date::DAYNAMES %>
+9:        <% day_of_week = week[date.wday] %>
+10:        <% day_of_month = date.mday.to_s %>
+11:        <% month = Date::MONTHNAMES[date.month] %>
+12:        <% year = date.year %>
+13:        <% case day_of_month.to_i.digits[0]%>
+14:        <% when 1 %>z
+15:          <% then day_of_month << "st" %>
+16:        <% when 2 %>
+17:          <% then day_of_month << "nd" %>
+18:        <% when 3 %>
+19:          <% then day_of_month << "rd" %>
+20:        <% else %>
+21:          <% day_of_month << "th" %>
+22:        <% end %>
+23:        <li>
+24:          <%= link_to group.name, group_path(group) %>
+25:          <%= "- created on #{day_of_week}, #{day_of_month} #{month} #{year}" %>
+26:        </li>
+27:      <% end %>
+28:    </ul>
+  
+app/views/groups/index.html.erb:14: syntax error, unexpected instance variable, expecting `when'
+app/views/groups/index.html.erb:14: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:15: syntax error, unexpected `then', expecting `end'
+app/views/groups/index.html.erb:16: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:18: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:20: else without rescue is useless
+app/views/groups/index.html.erb:27: syntax error, unexpected `end', expecting end-of-input
+app/views/groups/index.html.erb:14: syntax error, unexpected instance variable, expecting `when'
+app/views/groups/index.html.erb:14: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:15: syntax error, unexpected `then', expecting `end'
+app/views/groups/index.html.erb:16: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:18: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:20: else without rescue is useless
+app/views/groups/index.html.erb:27: syntax error, unexpected `end', expecting end-of-input
+app/views/groups/index.html.erb:14: syntax error, unexpected instance variable, expecting `when'
+app/views/groups/index.html.erb:14: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:15: syntax error, unexpected `then', expecting `end'
+app/views/groups/index.html.erb:16: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:18: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:20: else without rescue is useless
+app/views/groups/index.html.erb:27: syntax error, unexpected `end', expecting end-of-input
+app/views/groups/index.html.erb:14: syntax error, unexpected instance variable, expecting `when'
+app/views/groups/index.html.erb:14: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:15: syntax error, unexpected `then', expecting `end'
+app/views/groups/index.html.erb:16: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:18: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:20: else without rescue is useless
+app/views/groups/index.html.erb:27: syntax error, unexpected `end', expecting end-of-input
+app/views/groups/index.html.erb:14: syntax error, unexpected instance variable, expecting `when'
+app/views/groups/index.html.erb:14: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:15: syntax error, unexpected `then', expecting `end'
+app/views/groups/index.html.erb:16: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:18: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:20: else without rescue is useless
+app/views/groups/index.html.erb:27: syntax error, unexpected `end', expecting end-of-input
+app/views/groups/index.html.erb:14: syntax error, unexpected instance variable, expecting `when'
+app/views/groups/index.html.erb:14: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:15: syntax error, unexpected `then', expecting `end'
+app/views/groups/index.html.erb:16: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:18: syntax error, unexpected `when', expecting `end'
+app/views/groups/index.html.erb:20: else without rescue is useless
+app/views/groups/index.html.erb:27: syntax error, unexpected `end', expecting end-of-input
+Started GET "/groups" for ::1 at 2020-10-05 10:10:24 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 6660)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:10:27 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3387)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 0.9ms | Allocations: 9134)
+
+
+Started GET "/groups/3" for ::1 at 2020-10-05 10:10:29 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (9.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (4.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 3]]
+  ↳ app/views/groups/show.html.erb:6
+  Rendered groups/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 12.6ms | ActiveRecord: 14.2ms | Allocations: 5885)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:10:31 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (3.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 3.8ms | Allocations: 8032)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:10:35 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.8ms | Allocations: 8033)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 10:10:36 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.4ms | Allocations: 5349)
+
+
+Started GET "/groups/3" for ::1 at 2020-10-05 10:10:38 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (5.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 3]]
+  ↳ app/views/groups/show.html.erb:6
+  Rendered groups/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 7.5ms | Allocations: 5875)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:10:50 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"G4HHpAfvbmTLw/WrHWcgdl+iZ7nVIGZ7CIxKxoOlMOd2MSdcBxy/q2skHsx/UA506RYIze2CogRoiirym4LdOA==", "transaction"=>{"group_id"=>"2", "name"=>"dao", "amount"=>"5"}, "commit"=>"Submit"}
+No template found for TransactionsController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 2756)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:10:51 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1442)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 7342)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 10:10:56 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.9ms | Allocations: 5359)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:10:58 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (2.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 16.7ms | ActiveRecord: 3.8ms | Allocations: 8023)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:11:00 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.0ms | Allocations: 8039)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:11:00 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 8041)
+
+
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/groups/2" for ::1 at 2020-10-05 10:12:40 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 24.9ms | Allocations: 10035)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 27.1ms | ActiveRecord: 11.0ms | Allocations: 19778)
+
+
+Started GET "/transactions" for ::1 at 2020-10-05 10:12:43 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 864)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.6ms | Allocations: 6379)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:12:46 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 7017)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:12:52 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"8zgy9X6WInuc6wToPlPeXAnvXHWzRytu+BWN2ZxYMG+eiNINfmXztDwM749cZPBev1szAYvl7xGYE+3thH/dsA==", "transaction"=>{"group_id"=>"2", "name"=>"dao", "amount"=>"3"}, "commit"=>"Submit"}
+No template found for TransactionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 1283)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:12:53 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1177)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 6510)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 10:12:55 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.3ms | Allocations: 5367)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:12:57 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (4.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (2.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 11.9ms | ActiveRecord: 7.8ms | Allocations: 8027)
+
+
+Started GET "/groups/3" for ::1 at 2020-10-05 10:12:59 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (2.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 3]]
+  ↳ app/views/groups/show.html.erb:6
+  Rendered groups/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 2.5ms | Allocations: 5889)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 10:14:14 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:8
+  Rendered groups/show.html.erb within layouts/application (Duration: 18.5ms | Allocations: 10010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 20.7ms | ActiveRecord: 6.2ms | Allocations: 19651)
+
+
+Started GET "/transactions" for ::1 at 2020-10-05 10:14:18 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 697)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 1.1ms | Allocations: 6070)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:14:21 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 7014)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:14:32 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"9u8hloBfeOtpRZJonhpgJmOBc47X3SsTn2tKxFLBop6bX8FugKypJMmieQ/8LU4k1TUc+u9/72z/bSrwSuZPQQ==", "transaction"=>{"group_id"=>"2", "name"=>"sapdo", "amount"=>"5"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1483)
+
+
+  
+ArgumentError (missing keyword: :fallback_location):
+  
+app/controllers/transactions_controller.rb:17:in `create'
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:17:00 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 16.6ms | ActiveRecord: 7.6ms | Allocations: 17729)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:17:14 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"/NUUQ02L5QZCNNnZMZZvNFO0NWguaF/gsUO99TdOFxCRZfS7TXg0yeLTMr5ToUE25QBaHBbKm5/RRd3BL2n6zw==", "transaction"=>{"group_id"=>"3", "name"=>"Dog training", "amount"=>"15"}, "commit"=>"Submit"}
+Redirected to 
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.0ms | Allocations: 83877)
+
+
+  
+NoMethodError (undefined method `back_url' for #<TransactionsController:0x00007fe44f178a00>):
+  
+app/controllers/transactions_controller.rb:17:in `create'
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:17:45 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 19.3ms | ActiveRecord: 8.5ms | Allocations: 17747)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:17:51 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"BjR5evaExGMNlpAAdSyK/HA6R5Io+CtQi2OL/L9XDFJrhJmC9ncVrK1xe2cXG6T+xo4o5hBa7y/rZevIp3DhjQ==", "transaction"=>{"group_id"=>"3", "name"=>"Dog training", "amount"=>"15"}, "commit"=>"Submit"}
+Redirected to http://localhost:3000/transactions
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 1345)
+
+
+Started GET "/transactions" for ::1 at 2020-10-05 10:17:51 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 704)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 13.4ms | ActiveRecord: 5.5ms | Allocations: 5918)
+
+
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/transactions" for ::1 at 2020-10-05 10:24:24 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4017)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 0.9ms | Allocations: 10337)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 10:24:27 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2691)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 8586)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:24:36 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"BjR5evaExGMNlpAAdSyK/HA6R5Io+CtQi2OL/L9XDFJrhJmC9ncVrK1xe2cXG6T+xo4o5hBa7y/rZevIp3DhjQ==", "transaction"=>{"group_id"=>"2", "name"=>"Dog training", "amount"=>"5"}, "commit"=>"Submit"}
+No template found for TransactionsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 2371)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-05 10:45:22 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:5
+  Rendered transactions/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 19.6ms | ActiveRecord: 1.3ms | Allocations: 17336)
+
+
+Started POST "/transactions" for ::1 at 2020-10-05 10:45:28 +0100
+Processing by TransactionsController#create as JS
+  Parameters: {"authenticity_token"=>"ETbML0DYOL+andywJ7Z67ajVCPHJIvtm98cfn0MKlPt8hizXQCvpcDp6N9dFgVTvHmFnhfGAPxmXwX+rWy15JA==", "transaction"=>{"group_id"=>"2", "name"=>"dsas", "amount"=>"5"}, "commit"=>"Submit"}
+No template found for TransactionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 1288)
+
+
+Started GET "/transactions" for ::1 at 2020-10-05 10:45:59 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 707)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 5958)
+
+

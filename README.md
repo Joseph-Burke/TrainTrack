@@ -62,6 +62,15 @@ This branch will go through the user story and ensure that all functionality is 
   - ~~The author of each transaction is also visible.~~
 8. When a user opens "Create new group" or "Add new transaction":
   - A form with all necessary fields is displayed.
+  ISSUE: Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.
+
+### List of all issues
+1. Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.
+2. Postgres won't accept a new element in the database that doesn't have a group_id attached to it.
+3. Groups do not yet have icons.
+4. Transactions have timestamps but no 'date' row.
+5. There is no external transactions page yet.
+6. Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.
 
 ### feature/styles
 

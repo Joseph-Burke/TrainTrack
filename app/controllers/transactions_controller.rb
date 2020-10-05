@@ -7,15 +7,15 @@ class TransactionsController < ApplicationController
 
   def new
     redirect_to root_path if session[:user_id].nil?
-    @user = User.find(session[:user_id])
-    @transaction = @user.transactions.build
+    user = User.find(session[:user_id])
+    @transaction = user.transactions.build
     @groups = Group.all
   end
 
   def create
     redirect_to root_path if session[:user_id].nil?
-    @transaction = Transaction.new(transaction_params)
-    @transaction.save
+    transaction = Transaction.new(transaction_params)
+    transaction.save
   end
 
   def show
@@ -26,6 +26,6 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:user_id, :group_id, :name, :amount)
+    params.require(:transaction).permit(:group_id, :name, :amount)
   end
 end
