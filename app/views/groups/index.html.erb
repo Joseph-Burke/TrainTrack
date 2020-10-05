@@ -2,6 +2,22 @@
 
 <ul>
   <% @groups.each do |group| %>
-    <li><%= group.name %></li>
+    <% date = group.created_at.to_date %>
+    <% week = Date::DAYNAMES %>
+    <% day_of_week = week[date.wday] %>
+    <% day_of_month = date.mday.to_s %>
+    <% month = Date::MONTHNAMES[date.month] %>
+    <% year = date.year %>
+    <% case day_of_month.to_i.digits[0]%>
+    <% when 1 %>
+      <% then day_of_month << "st" %>
+    <% when 2 %>
+      <% then day_of_month << "nd" %>
+    <% when 3 %>
+      <% then day_of_month << "rd" %>
+    <% else %>
+      <% day_of_month << "th" %>
+    <% end %>
+    <li><%= "#{group.name}, created on #{day_of_week}, #{day_of_month} #{month} #{year}" %></li>
   <% end %>
 </ul>

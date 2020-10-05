@@ -9,8 +9,4 @@ module ApplicationHelper
     User.find(current_user_id)
   end
 
-  def logged_in?
-    session[:user_id].nil?
-  end
-
 end
