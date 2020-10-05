@@ -23,6 +23,15 @@ class UsersController < ApplicationController
     @groups = Group.all
   end
 
+  def update
+    @user.update(user_params)
+    redirect_to user_path(@user)
+  end
+
+  def edit
+    @user = User.find(session[:user_id])
+  end
+
   private
 
   def user_params
