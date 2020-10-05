@@ -10,7 +10,3 @@
 <% end %>
 
 <%= button_to "Log Out", logout_path, method: 'delete' %>
-
-<% unless session[:user_id].nil? %>
-  <p><%= "You are currently logged in as #{current_user.name}." %></p>
-<% end %>

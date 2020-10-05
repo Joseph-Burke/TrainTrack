@@ -1,3 +1,68 @@
 // Place all the styles related to the Transactions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.transactions-total {
+  padding: 2rem 1rem;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > * {
+    margin: 0;
+  }
+  h3 {
+
+  }
+
+  span {
+
+  }
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #F0F2F1;
+
+  .card {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    background: #FFFFFF;
+
+    .image {
+      background: red;
+      height: 110px;
+      width: 110px;
+    }
+    
+    .card-body {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+
+      .transaction-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        h5 {
+          margin-top: 1rem;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .transaction-amount {
+
+      }
+    }
+  }
+}
