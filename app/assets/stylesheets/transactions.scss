@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// Transactions index
+
 .transactions-total {
   padding: 2rem 1rem;
   background: #FFFFFF;
@@ -59,9 +61,45 @@
           margin: 0;
         }
       }
+    }
+  }
+}
 
-      .transaction-amount {
+// Transactions show
 
+.transaction-show {
+  background: #F0F2F1;
+  padding: 1rem;
+
+  .transaction-card {
+    background: white;
+    padding: 1.5rem;
+
+    .header {
+      .title-wrapper {
+        display: flex;
+
+        .image {
+          width: 110px;
+          height: 110px;
+          background: red;
+        }
+
+        .title {
+          margin-left: 1rem;
+        }
+      }
+    }
+    .info {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+    .amount {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      h4 {
+        margin: 0;
       }
     }
   }
