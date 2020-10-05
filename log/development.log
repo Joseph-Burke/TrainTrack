@@ -5246,3 +5246,105 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 5259)
 
 
+Started GET "/groups" for ::1 at 2020-10-05 09:09:44 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1073)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 6557)
+
+
+Started GET "/groups/2" for ::1 at 2020-10-05 09:09:48 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  Rendered groups/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 5494)
+
+
+Started GET "/groups/3" for ::1 at 2020-10-05 09:09:49 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (8.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  Rendered groups/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 8.6ms | ActiveRecord: 8.6ms | Allocations: 5130)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 09:11:06 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 6594)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 09:11:06 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 740)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 5328)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 09:11:17 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 6581)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 09:11:26 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1076)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 6569)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 09:12:09 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1077)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 6557)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 09:12:47 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 5317)
+
+
+Started GET "/groups" for ::1 at 2020-10-05 09:12:48 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1077)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 6554)
+
+

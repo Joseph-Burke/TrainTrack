@@ -18,6 +18,9 @@
     <% else %>
       <% day_of_month << "th" %>
     <% end %>
-    <li><%= "#{group.name}, created on #{day_of_week}, #{day_of_month} #{month} #{year}" %></li>
+    <li>
+      <%= link_to group.name, group_path(group) %>
+      <%= "- created on #{day_of_week}, #{day_of_month} #{month} #{year}" %>
+    </li>
   <% end %>
 </ul>
