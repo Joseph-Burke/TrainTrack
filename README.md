@@ -55,7 +55,7 @@ This branch will go through the user story and ensure that all functionality is 
 7. When the user opens "All groups"
   - ~~A list of all groups is displayed.~~
   - Each group displays its icon, name and creation date.
-  - Each group is clickable and opens "Group transactions" page
+  - ~~Each group is clickable and opens "Group transactions" page~~
   - An action button "Create new" is displayed.
 7. When the user opens "Group transactions"
   - A list if transactions that belong to that group is displayed.

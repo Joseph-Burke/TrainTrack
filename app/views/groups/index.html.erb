@@ -1,5 +1,7 @@
 <h1>Hello from the groups index view!</h1>
 
+<%= button_to "Create a new group", new_group_path, method: 'get' %>
+
 <ul>
   <% @groups.each do |group| %>
     <% date = group.created_at.to_date %>
