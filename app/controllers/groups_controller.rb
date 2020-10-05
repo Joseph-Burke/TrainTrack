@@ -18,6 +18,7 @@ class GroupsController < ApplicationController
   def show
     redirect_to root_path if session[:user_id].nil?
     @group = Group.find(params[:id])
+    @transactions = @group.transactions
   end
 
   private

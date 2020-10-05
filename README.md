@@ -56,10 +56,10 @@ This branch will go through the user story and ensure that all functionality is 
   - ~~A list of all groups is displayed.~~
   - Each group displays its icon, name and creation date.
   - ~~Each group is clickable and opens "Group transactions" page~~
-  - An action button "Create new" is displayed.
+  - ~~An action button "Create new" is displayed.~~
 7. When the user opens "Group transactions"
-  - A list if transactions that belong to that group is displayed.
-  - The author of each transaction is also visible.
+  - ~~A list if transactions that belong to that group is displayed.~~
+  - ~~The author of each transaction is also visible.~~
 8. When a user opens "Create new group" or "Add new transaction":
   - A form with all necessary fields is displayed.
 
