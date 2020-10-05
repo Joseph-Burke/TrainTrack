@@ -3,5 +3,7 @@
 <%= form_with(model: @user) do |form| %>
   <%= form.label :name, "Enter your name to sign up" %>
   <%= form.text_field :name %>
+  <%= form.label :avatar, "Select your profile picture" %>
+  <%= form.file_field :avatar %>
   <%= form.submit "Submit" %>
 <% end %>

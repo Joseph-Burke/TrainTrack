@@ -65,8 +65,7 @@ This branch will go through the user story and ensure that all functionality is 
   ISSUE: Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.
 
 ### List of all issues
-1. Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.
-2. Postgres won't accept a new element in the database that doesn't have a group_id attached to it.
+1. ~~Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.~~
 3. Groups do not yet have icons.
 4. Transactions have timestamps but no 'date' row.
 5. There is no external transactions page yet.
