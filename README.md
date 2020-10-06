@@ -67,9 +67,9 @@ This branch will go through the user story and ensure that all functionality is 
 ### List of all issues
 1. ~~Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.~~
 3. Groups do not yet have icons.
-4. Transactions have timestamps but no 'date' row.
-5. There is no external transactions page yet.
-6. Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.
+4. ~~Transactions have timestamps but no 'date' row.~~
+5. There is no external transactions page yet. - 
+6. ~~Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.~~ 
 
 ### feature/styles
 

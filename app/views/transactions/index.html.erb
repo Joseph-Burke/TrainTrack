@@ -10,7 +10,7 @@
       <div class="card-body">
         <div class="transaction-details">
           <h5><%= transaction.name %></h5>
-          <p><%= transaction.created_at.to_date.to_formatted_s %></p>
+          <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
         </div>
         <div class="transaction-amount">
           <%= transaction.amount %>
