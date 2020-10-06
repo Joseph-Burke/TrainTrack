@@ -1,3 +1,57 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.users-show {
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - 2rem);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 2.8rem;
+  background: linear-gradient(
+    to bottom left,
+    #15335E,
+    rgb(84, 161, 216)
+    );
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+
+    .profile-picture {
+      width: 270px;
+      height: 270px;
+      border-radius: 100%;
+      background: red;
+    }
+
+    .username {
+      font-weight: 100;
+    }
+  }
+
+  .links {
+    padding: 0 7rem;
+    display: flex;
+    flex-direction: column;
+
+
+    li {
+      padding: 2.5rem 0;
+      text-align: left;
+      list-style-type: none;
+      border-top: 1px solid white;
+      a {
+        color: rgba(245, 245, 245, 0.9);
+        text-decoration: none;
+        font-weight: 100;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+}
