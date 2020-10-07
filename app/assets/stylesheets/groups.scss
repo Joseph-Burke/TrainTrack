@@ -12,6 +12,10 @@
   @include banner;
 }
 
+.transactions-list {
+  @include card-list;
+}
+
 // New group
 
 .new-group {

@@ -77,7 +77,7 @@ This branch will go through the user story and ensure that all functionality is 
 STYLES CHECKLIST
 - Groups
   - ~~index~~
-  - new
+  - ~~new~~
   - show
 - Sessions
   - new
