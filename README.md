@@ -78,9 +78,9 @@ STYLES CHECKLIST
 - Groups
   - ~~index~~
   - ~~new~~
-  - show
+  - ~~show~~
 - Sessions
-  - new
+  - ~~new~~
 - Transactions
   - index
   - new

@@ -27,8 +27,7 @@
     }
     
     .field-wrapper {
-      display: flex;
-      margin: 1rem 0;
+      @include field-wrapper
       
       label {
         flex: 0;

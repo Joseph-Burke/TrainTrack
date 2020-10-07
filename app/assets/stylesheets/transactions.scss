@@ -74,3 +74,26 @@
     }
   }
 }
+
+// Transactions new
+
+.transactions-new {
+  form {
+    .field-wrapper {
+      @include field-wrapper;
+      .input {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        box-shadow: none;
+        > * {
+          min-width: 30%;
+        }
+      }
+    }
+    input,
+    label {
+      font-size: 2rem;
+    }
+  }
+}
