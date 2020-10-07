@@ -14809,3 +14809,15 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.4ms | Allocations: 7219)
 
 
+Started GET "/users/1/edit" for ::1 at 2020-10-07 15:58:40 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.2ms | Allocations: 412)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.0ms | Allocations: 472)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 39.2ms | ActiveRecord: 1.2ms | Allocations: 5994)
+
+
