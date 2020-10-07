@@ -73,6 +73,10 @@
       border-left: none;
       border-right: none;
       padding: 1rem 0;
+      .date {
+        font-size: 0.65rem;
+        color: #666666;
+      }
     }
     .amount {
       display: flex;

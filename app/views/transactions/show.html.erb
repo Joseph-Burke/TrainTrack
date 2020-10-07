@@ -18,7 +18,9 @@
 
     <div class="info">
       <p><%= "Transaction ID: #{@transaction.id}" %></p>
-      <p><%= "#{@transaction.created_at}" %></p>
+      <p class="date">
+        <%= "#{format_date(@transaction.created_at.to_date)}"%>
+      </p>
     </div>
     <div class="amount">
       <h4>TOTAL PAYMENT</h4>
