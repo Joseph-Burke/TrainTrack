@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background: #F0F2F1;
+  background: #f0f2f1;
 
   .card {
     padding: 1rem;
     margin: 1rem;
     display: flex;
-    background: #FFFFFF;
+    background: #fff;
 
     .image {
       background: red;
@@ -30,7 +30,7 @@
 
         h5,
         p {
-          color: #777777;
+          color: #777;
         }
 
         h5 {
@@ -48,7 +48,7 @@
 }
 
 @mixin banner {
-  background: #3775BE;
+  background: #3775be;
   text-align: center;
 
   h1 {
@@ -69,8 +69,9 @@
   .input {
     flex: 1;
     border: none;
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 0 0 2px 1px black;
   }
+
   label {
     width: 20%;
   }

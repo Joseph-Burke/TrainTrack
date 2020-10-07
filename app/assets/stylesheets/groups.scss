@@ -21,27 +21,28 @@
 .new-group {
   form {
     padding: 2rem;
+
     input,
     label {
       font-size: 2rem;
     }
-    
+
     .field-wrapper {
       @include field-wrapper
-      
-      label {
+
+        label {
         flex: 0;
         margin-right: 1rem;
       }
-      
+
       input {
         flex: 1;
         border: none;
       }
     }
+
     input[type="submit"] {
       margin: 1rem 0;
     }
   }
 }
-  

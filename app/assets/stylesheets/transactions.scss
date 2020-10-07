@@ -16,7 +16,7 @@
 
 .transactions-total {
   padding: 2rem 1rem;
-  background: #FFFFFF;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +38,7 @@
 // Transactions show
 
 .transaction-show {
-  background: #F0F2F1;
+  background: #f0f2f1;
   padding: 1rem;
 
   .transaction-card {
@@ -66,19 +66,19 @@
       .description {
         padding: 1rem 0;
         font-size: 0.65rem;
-        color: #666666;
+        color: #666;
       }
     }
 
     .info {
-      border: 2px solid #555555;
+      border: 2px solid #555;
       border-left: none;
       border-right: none;
       padding: 1rem 0;
 
       .date {
         font-size: 0.65rem;
-        color: #666666;
+        color: #666;
       }
     }
 
