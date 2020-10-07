@@ -28,9 +28,68 @@ NOTE: the data architecture is a bit of a mess right now. The table I have been 
     - ~~Transaction - new, create, index, show~~
     - ~~Session - new, create, destroy~~
 
-CURRENT STATE OF PROJECT: 
-  - Main routes are all functional, allowing Users/Groups/Transactions to be displayed and created.
-  - Sessions can also be started and destroyed, allowing a user to log in.
+### feature/user_story
+This branch will go through the user story and ensure that all functionality is in place at each part of the application. The following aspects of the user story should be in place by the conclusion of this feature branch.
+
+  - ~~Create a helper method to access the current_user~~
+1. ~~Ensure that all attempts to access the application will redirect to the log in page if the user has not yet logged in.~~
+  - 
+2. Ensure that validations take place to deal with the scenario of a user inputting a name that is not an existing user's.
+3. Ensure that validations exist that will prevent two users from having the same name.
+4. ~~The user will then be presented with a User profile page that includes links to:~~
+  - ~~All my transactions~~
+  - ~~All my external transactions~~
+    - ISSUE: Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.
+  - All groups
+    ISSUE: Postgres won't accept a new element in the database that doesn't have a group_id attached to it.
+
+5. When a user opens "All my transactions" page;
+  - ~~Total amount is displayed at the top.~~
+  - ~~A list of transactions created by the logged in user is displayed~~
+  - ~~Each transaction displays its name, amount and date, and an icon of the first group it has been assigned to.~~
+    - ISSUE: Groups do not yet have icons.
+    - ISSUE: Transactions have timestamps but no 'date' row.
+6. When a user opens "All my external transactions"
+  - A list of all transactions that are created by the logged-in user but not assigned to a group
+  - ISSUE: There is no external transactions page yet.
+7. When the user opens "All groups"
+  - ~~A list of all groups is displayed.~~
+  - Each group displays its icon, name and creation date.
+  - ~~Each group is clickable and opens "Group transactions" page~~
+  - ~~An action button "Create new" is displayed.~~
+7. When the user opens "Group transactions"
+  - ~~A list if transactions that belong to that group is displayed.~~
+  - ~~The author of each transaction is also visible.~~
+8. When a user opens "Create new group" or "Add new transaction":
+  - A form with all necessary fields is displayed.
+  ISSUE: Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.
+
+### List of all issues
+1. I need to figure out how to get images attached to my groups and users.
+2. There is no external transactions page yet. - 
+
+1. ~~Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.~~
+4. ~~Transactions have timestamps but no 'date' row.~~
+6. ~~Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.~~ 
+
+### feature/styles
+
+STYLES CHECKLIST
+- Groups
+  - ~~index~~
+  - ~~new~~
+  - ~~show~~
+- Sessions
+  - ~~new~~
+- Transactions
+  - ~~index~~
+  - ~~new~~
+  - ~~show~~
+- Users
+  - ~~index~~
+  - ~~new~~
+  - ~~show~~
+  - ~~edit~~
 
 ## Project Ideas 
 

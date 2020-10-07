@@ -1,9 +1,29 @@
-<h1>Hello from the Transaction index view!</h1>
+<div class="transactions-index">  
+  <div class="banner">
+    <h1>Transactions</h1>
+  </div>
 
-<ul>
-  <% @transactions.each do |transaction| %>
-    <li>
-      <%= transaction.name %>
-    </li>
-  <% end %>
-</ul>
+
+
+  <div class="transactions-total">
+    <h3>Transactions Total:</h3>
+    <span><%= @total_transactions_value %></span>
+  </div>
+
+  <ul class="transactions-list">
+    <% @transactions.each do |transaction| %>
+      <div class="card">
+        <div class="image"></div>
+        <div class="card-body">
+          <div class="details">
+            <h5><%= transaction.name %></h5>
+            <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
+          </div>
+          <div class="transaction-amount">
+            <%= "#{transaction.amount} hours" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </ul>
+</div>

@@ -1,3 +1,17 @@
-<h1>
-  You are viewing the Group show page for <%= @group.name %>!
-</h1>
+<div class="banner">
+  <h1><%= @group.name %></h1>
+</div>
+
+<ul class="transactions-list">
+  <% @transactions.each do |transaction| %>
+    <div class="card">
+      <div class="image"></div>
+      <div class="card-body">
+        <div class="details">
+          <h5><%= transaction.name %></h5>
+          <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</ul>

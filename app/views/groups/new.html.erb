@@ -1,7 +1,13 @@
-<h1>Hello from the new group view!</h1>
+<div class="new-group">
+  <div class="banner">
+    <h1>New Group</h1>
+  </div>
 
-<%= form_with(model: @group) do |form| %>
-  <%= form.label :name, "Enter the name of your new group" %>
-  <%= form.text_field :name %>
-  <%= form.submit "Submit" %>
-<% end %>
+  <%= form_with(model: @group) do |form| %>
+    <div class="field-wrapper">
+      <%= form.label :name, "Name:" %>
+      <%= form.text_field :name %>
+    </div>
+    <%= form.submit "Create" %>
+  <% end %>
+</div>

@@ -1,3 +1,48 @@
 // Place all the styles related to the Groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'mixins';
+
+.groups-list {
+  @include card-list;
+}
+
+.banner {
+  @include banner;
+}
+
+.transactions-list {
+  @include card-list;
+}
+
+// New group
+
+.new-group {
+  form {
+    padding: 2rem;
+
+    input,
+    label {
+      font-size: 2rem;
+    }
+
+    .field-wrapper {
+      @include field-wrapper
+
+        label {
+        flex: 0;
+        margin-right: 1rem;
+      }
+
+      input {
+        flex: 1;
+        border: none;
+      }
+    }
+
+    input[type="submit"] {
+      margin: 1rem 0;
+    }
+  }
+}
