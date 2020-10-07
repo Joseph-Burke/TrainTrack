@@ -62,31 +62,37 @@
           font-weight: 100;
         }
       }
+
       .description {
         padding: 1rem 0;
         font-size: 0.65rem;
         color: #666666;
       }
     }
+
     .info {
       border: 2px solid #555555;
       border-left: none;
       border-right: none;
       padding: 1rem 0;
+
       .date {
         font-size: 0.65rem;
         color: #666666;
       }
     }
+
     .amount {
       display: flex;
       justify-content: space-between;
       padding: 1.5rem 0;
       font-size: 2.2rem;
+
       h4 {
         margin: 0;
         font-weight: 300;
       }
+
       span {
         font-weight: 600;
       }
@@ -100,16 +106,19 @@
   form {
     .field-wrapper {
       @include field-wrapper;
+
       .input {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         box-shadow: none;
+
         > * {
           min-width: 30%;
         }
       }
     }
+
     input,
     label {
       font-size: 2rem;

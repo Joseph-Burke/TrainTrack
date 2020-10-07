@@ -14726,3 +14726,86 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 5352)
 
 
+Started GET "/users/1" for ::1 at 2020-10-07 14:55:48 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 122ms (Views: 108.0ms | ActiveRecord: 1.7ms | Allocations: 28915)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 14:55:54 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 10.9ms | ActiveRecord: 1.0ms | Allocations: 7107)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 14:56:04 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (11.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 936)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 11.0ms | Allocations: 6398)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 14:56:06 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (7.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 7.0ms | Allocations: 5623)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 14:56:14 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.0ms | Allocations: 414)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 550)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 6121)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 14:57:27 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.6ms | Allocations: 598)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 895)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.4ms | Allocations: 26864)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-10-07 14:57:40 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.7ms | Allocations: 598)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 892)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.4ms | Allocations: 7219)
+
+

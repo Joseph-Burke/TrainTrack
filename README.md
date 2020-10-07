@@ -87,9 +87,9 @@ STYLES CHECKLIST
   - ~~show~~
 - Users
   - ~~index~~
-  - new
-  - show
-  - edit
+  - ~~new~~
+  - ~~show~~
+  - ~~edit~~
 
 ## Project Ideas 
 
