@@ -10807,3 +10807,534 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 1.1ms | Allocations: 6805)
 
 
+Started GET "/transactions" for ::1 at 2020-10-06 11:19:11 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 6.9ms | Allocations: 6251)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:47:34 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1082)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 70.3ms | ActiveRecord: 2.9ms | Allocations: 25054)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:47:35 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 3.8ms | Allocations: 6257)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:47:36 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 6250)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:47:47 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.6ms | Allocations: 23813)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:49:21 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.7ms | Allocations: 23848)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:49:46 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.5ms | Allocations: 6724)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:49:47 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 6250)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:49:47 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.5ms | Allocations: 6255)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:50:02 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 7371)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:50:41 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.4ms | Allocations: 23018)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:50:44 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 1.1ms | Allocations: 23350)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:50:49 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 6246)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:50:50 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:7
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.8ms | Allocations: 23427)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:51:27 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.8ms | Allocations: 7370)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:51:28 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.3ms | Allocations: 6251)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:51:32 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 6283)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:53:21 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 7371)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:53:49 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.4ms | Allocations: 22988)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:53:51 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (20.6ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 13.3ms | ActiveRecord: 21.3ms | Allocations: 6246)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:53:52 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 6246)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:54:20 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 6737)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:55:14 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.3ms | Allocations: 23880)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:55:15 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.9ms | Allocations: 6260)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:55:25 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 6268)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:55:26 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 2.3ms | Allocations: 24705)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:55:40 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.5ms | Allocations: 23854)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:55:41 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 1.5ms | Allocations: 6258)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:55:53 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 38.5ms | ActiveRecord: 0.4ms | Allocations: 22987)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:56:06 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.5ms | Allocations: 24289)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:57:05 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.6ms | Allocations: 23872)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:57:06 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.4ms | Allocations: 24264)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:57:20 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.4ms | Allocations: 23462)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:57:46 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1011)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.4ms | Allocations: 7367)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:57:52 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 7362)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 15:57:53 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 6266)
+
+
+Started GET "/login" for ::1 at 2020-10-06 16:08:15 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 537)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.0ms | Allocations: 5855)
+
+
+Started POST "/login" for ::1 at 2020-10-06 16:08:44 +0100
+Processing by SessionsController#create as JS
+  Parameters: {"authenticity_token"=>"Ow8Zq742Wf4dxmZuALoPGc9fqA9eWUN6Xv6kwdYN8+BWv/lTvsWIMb0hjQlijSEbeevHe2b7hwU++MT1zioePw==", "name"=>"Joe", "commit"=>"Enter"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 200 OK in 10ms (ActiveRecord: 1.8ms | Allocations: 1226)
+
+
+Started GET "/users/1" for ::1 at 2020-10-06 16:08:44 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (22.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (6.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 22.0ms | ActiveRecord: 28.9ms | Allocations: 7561)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 16:08:55 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (8.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 10.9ms | ActiveRecord: 8.9ms | Allocations: 6266)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 16:09:02 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (50.9ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 20.2ms | ActiveRecord: 51.4ms | Allocations: 6251)
+
+
+Started GET "/groups" for ::1 at 2020-10-06 16:09:04 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1148)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.9ms | Allocations: 6523)
+
+
+Started GET "/groups/3" for ::1 at 2020-10-06 16:09:07 +0100
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:20:in `show'
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 3]]
+  ↳ app/views/groups/show.html.erb:6
+  Rendered groups/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1454)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 14.7ms | ActiveRecord: 0.6ms | Allocations: 11026)
+
+
+Started GET "/transactions" for ::1 at 2020-10-06 16:09:13 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (5.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:8
+  Rendered transactions/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 5.4ms | Allocations: 6271)
+
+
+Started GET "/" for ::1 at 2020-10-07 08:35:14 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 46.7ms | ActiveRecord: 0.0ms | Allocations: 5127)
+
+

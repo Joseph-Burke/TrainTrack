@@ -4,6 +4,10 @@
 
 // Transactions index
 
+.transactions-index {
+  font-size: 2rem;
+}
+
 .transactions-total {
   padding: 2rem 1rem;
   background: #FFFFFF;
@@ -13,13 +17,6 @@
 
   > * {
     margin: 0;
-  }
-  h3 {
-
-  }
-
-  span {
-
   }
 }
 
@@ -53,13 +50,24 @@
         justify-content: space-between;
         padding: 0 1rem;
 
+        h5, p {
+          color: #777777;
+        }
+
         h5 {
           margin-top: 1rem;
+          font-weight: 200;
         }
 
         p {
           margin: 0;
+          font-size: 1.2rem;
         }
+      }
+
+      .transaction-amount {
+        padding-top: 1rem;
+        font-weight: 800;
       }
     }
   }
