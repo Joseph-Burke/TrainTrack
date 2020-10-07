@@ -14276,3 +14276,453 @@ Processing by TransactionsController#show as HTML
 Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5467)
 
 
+Started GET "/users/1/edit" for ::1 at 2020-10-07 14:23:41 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.2ms | Allocations: 701)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 977)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 19.4ms | ActiveRecord: 0.3ms | Allocations: 9598)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:23:51 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 5828)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:24:57 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 813)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 6620)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:24:57 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 5551)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:25:05 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 5563)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:25:06 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 810)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 6600)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:26:27 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 895)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 6695)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:26:27 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 673)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.5ms | Allocations: 5563)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:26:28 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 673)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.8ms | Allocations: 5559)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:27:47 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 823)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms | Allocations: 10889)
+
+
+  
+ActionView::Template::Error (Error: no mixin named card-list
+        on line 60:14 of app/assets/stylesheets/users.scss
+>>     @include card-list
+
+   -------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/users.scss:60
+app/views/layouts/application.html.erb:8
+Started GET "/users/" for ::1 at 2020-10-07 14:27:59 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 667)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms | Allocations: 25139)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:28:40 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.3ms | Allocations: 25107)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:28:41 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 5539)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:28:47 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.3ms | Allocations: 25157)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:29:07 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.7ms | Allocations: 25147)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:29:08 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 5549)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:29:50 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.3ms | Allocations: 32863)
+
+
+Started GET "/users/" for ::1 at 2020-10-07 14:38:54 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 742)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.8ms | Allocations: 5623)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:40:08 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.1ms | Allocations: 550)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 836)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 5845)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:41:04 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.6ms | Allocations: 550)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 6636)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:41:23 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.2ms | Allocations: 550)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 835)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 6627)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:41:24 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.3ms | Allocations: 372)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 5314)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:43:17 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.1ms | Allocations: 550)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms | Allocations: 26258)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:43:30 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.7ms | Allocations: 372)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5319)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:43:30 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.6ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5305)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:44:49 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.2ms | Allocations: 561)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms | Allocations: 26650)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:44:49 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.8ms | Allocations: 372)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 5312)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:45:28 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.7ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 25288)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:45:29 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.7ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 5313)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:45:32 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.7ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 25322)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:45:33 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.0ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 5308)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:45:52 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.2ms | Allocations: 559)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 6651)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:45:53 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.8ms | Allocations: 372)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5308)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:46:42 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.1ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms | Allocations: 24914)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:46:43 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5321)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:46:44 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 5303)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:47:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.8ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 24930)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:47:15 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.7ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 5307)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:47:21 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 25304)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:47:24 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5774)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:49:18 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.6ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms | Allocations: 25345)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:49:19 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.8ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 5306)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:49:53 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.7ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 25344)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:49:54 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.0ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5303)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:50:10 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.6ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 24490)
+
+
+Started GET "/users/new" for ::1 at 2020-10-07 14:50:17 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.8ms | Allocations: 366)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 5352)
+
+

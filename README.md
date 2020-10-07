@@ -84,12 +84,12 @@ STYLES CHECKLIST
 - Transactions
   - ~~index~~
   - ~~new~~
-  - show
+  - ~~show~~
 - Users
-  - edit
-  - index
+  - ~~index~~
   - new
   - show
+  - edit
 
 ## Project Ideas 
 

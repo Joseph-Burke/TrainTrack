@@ -1,6 +1,9 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'mixins';
+
 .users-show {
   height: 100%;
   width: 100%;
@@ -53,5 +56,35 @@
       }
     }
   }
+}
 
+.users-index {
+  .users-list {
+    @include card-list
+    .card .details h5 {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  }
+}
+
+// New User
+
+.new-user {
+  form {
+    .field-wrapper {
+      @include field-wrapper;
+      input,
+      label {
+        font-size: 2rem;
+      }
+      label {
+        min-width: 30%;
+      }
+      input {
+        max-width: 70%;
+      }
+    }
+
+  }
 }
