@@ -82,8 +82,8 @@ STYLES CHECKLIST
 - Sessions
   - ~~new~~
 - Transactions
-  - index
-  - new
+  - ~~index~~
+  - ~~new~~
   - show
 - Users
   - edit

@@ -1,7 +1,10 @@
 <div class="transaction-show">
 
-  <div class="transaction-card">
+  <div class="banner">
+    <h1>Transaction Details</h1>
+  </div>
 
+  <div class="transaction-card">
     <div class="header">
       <div class="title-wrapper">
         <div class="image"></div>
@@ -14,11 +17,11 @@
     </div>
 
     <div class="info">
-      <p><%= "Transaction Number #{@transaction.id}" %></p>
+      <p><%= "Transaction ID: #{@transaction.id}" %></p>
       <p><%= "#{@transaction.created_at}" %></p>
     </div>
     <div class="amount">
       <h4>TOTAL PAYMENT</h4>
-      <span><%= @transaction.amount %></span>
+      <span><%= "#{@transaction.amount} hours" %></span>
     </div>
   </div>
