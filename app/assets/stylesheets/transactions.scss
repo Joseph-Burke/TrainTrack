@@ -4,19 +4,13 @@
 
 // Transactions index
 
+@import "mixins";
+
 .transactions-index {
   font-size: 2rem;
 
   .banner {
-    background: #3775BE;
-    text-align: center;
-
-    h1 {
-      font-weight: 100;
-      font-size: 2.7rem;
-      color: white;
-      padding: 1.5rem 0;
-    }
+    @include banner;
   }
 }
 
@@ -33,56 +27,12 @@
 }
 
 .transactions-list {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background: #F0F2F1;
+  @include card-list;
+}
 
-  .card {
-    padding: 1rem;
-    margin: 1rem;
-    display: flex;
-    background: #FFFFFF;
-
-    .image {
-      background: red;
-      height: 110px;
-      width: 110px;
-    }
-    
-    .card-body {
-      display: flex;
-      justify-content: space-between;
-      flex: 1;
-
-      .transaction-details {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 0 1rem;
-
-        h5, p {
-          color: #777777;
-        }
-
-        h5 {
-          margin-top: 1rem;
-          font-weight: 200;
-        }
-
-        p {
-          margin: 0;
-          font-size: 1.2rem;
-        }
-      }
-
-      .transaction-amount {
-        padding-top: 1rem;
-        font-weight: 800;
-      }
-    }
-  }
+.transaction-amount {
+  padding-top: 1rem;
+  font-weight: 800;
 }
 
 // Transactions show

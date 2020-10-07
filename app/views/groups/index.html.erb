@@ -1,28 +1,42 @@
-<h1>Hello from the groups index view!</h1>
+<div class="groups-index">
+  <div class="banner">
+    <h1>Groups</h1>
+  </div>
 
-<%= button_to "Create a new group", new_group_path, method: 'get' %>
+  <ul class="groups-list">
+    <% @groups.each do |group| %>
 
-<ul>
-  <% @groups.each do |group| %>
-    <% date = group.created_at.to_date %>
-    <% week = Date::DAYNAMES %>
-    <% day_of_week = week[date.wday] %>
-    <% day_of_month = date.mday.to_s %>
-    <% month = Date::MONTHNAMES[date.month] %>
-    <% year = date.year %>
-    <% case day_of_month.to_i.digits[0]%>
-    <% when 1 %>
-      <% then day_of_month << "st" %>
-    <% when 2 %>
-      <% then day_of_month << "nd" %>
-    <% when 3 %>
-      <% then day_of_month << "rd" %>
-    <% else %>
-      <% day_of_month << "th" %>
+      <% date = group.created_at.to_date %>
+      <% week = Date::DAYNAMES %>
+      <% day_of_week = week[date.wday] %>
+      <% day_of_month = date.mday.to_s %>
+      <% month = Date::MONTHNAMES[date.month] %>
+      <% year = date.year %>
+      <% case day_of_month.to_i.digits[0]%>
+      <% when 1 %>
+        <% then day_of_month << "st" %>
+      <% when 2 %>
+        <% then day_of_month << "nd" %>
+      <% when 3 %>
+        <% then day_of_month << "rd" %>
+      <% else %>
+        <% day_of_month << "th" %>
+      <% end %>
+
+      <div class="card">
+        <div class="image"></div>
+        
+        <div class="card-body">
+          <div class="details">
+            <h5><%= group.name %></h5>
+            <p><%= "- created on #{day_of_week}, #{day_of_month} #{month} #{year}" %></p>
+          </div>
+        </div>
+      </div>
+      
     <% end %>
-    <li>
-      <%= link_to group.name, group_path(group) %>
-      <%= "- created on #{day_of_week}, #{day_of_month} #{month} #{year}" %>
-    </li>
-  <% end %>
-</ul>
+  </ul>
+
+
+  <%= button_to "Create a new group", new_group_path, method: 'get' %>
+</div>

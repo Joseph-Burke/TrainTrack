@@ -74,10 +74,22 @@ This branch will go through the user story and ensure that all functionality is 
 
 ### feature/styles
 
-
-CURRENT STATE OF PROJECT: 
-  - Main routes are all functional, allowing Users/Groups/Transactions to be displayed and created.
-  - Sessions can also be started and destroyed, allowing a user to log in.
+STYLES CHECKLIST
+- Groups
+  - ~~index~~
+  - new
+  - show
+- Sessions
+  - new
+- Transactions
+  - index
+  - new
+  - show
+- Users
+  - edit
+  - index
+  - new
+  - show
 
 ## Project Ideas 
 

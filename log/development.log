@@ -11599,3 +11599,939 @@ Processing by TransactionsController#index as HTML
 Completed 200 OK in 50ms (Views: 45.1ms | ActiveRecord: 1.0ms | Allocations: 24256)
 
 
+Started GET "/groups" for ::1 at 2020-10-07 08:48:46 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (5.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 3261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 20.4ms | ActiveRecord: 7.7ms | Allocations: 8580)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:53:04 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.5ms | Allocations: 23861)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:53:10 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.4ms | Allocations: 23907)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:53:15 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.5ms | Allocations: 6727)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:54:06 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 807)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.4ms | Allocations: 12407)
+
+
+  
+ActionView::Template::Error (Error: no mixin named card-list
+        on line 46:12 of app/assets/stylesheets/transactions.scss
+>>   @include card-list
+
+   -----------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/transactions.scss:46
+app/views/layouts/application.html.erb:8
+Started GET "/transactions" for ::1 at 2020-10-07 08:54:09 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 807)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 5.4ms | Allocations: 6043)
+
+
+  
+ActionView::Template::Error (Error: no mixin named card-list
+        on line 46:12 of app/assets/stylesheets/transactions.scss
+>>   @include card-list
+
+   -----------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/transactions.scss:46
+app/views/layouts/application.html.erb:8
+Started GET "/transactions" for ::1 at 2020-10-07 08:54:37 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 807)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 9290)
+
+
+  
+ActionView::Template::Error (Error: no mixin named card-list
+        on line 46:12 of app/assets/stylesheets/transactions.scss
+>>   @include card-list
+
+   -----------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/transactions.scss:46
+app/views/layouts/application.html.erb:8
+Started GET "/transactions" for ::1 at 2020-10-07 08:54:39 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 807)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms | Allocations: 6040)
+
+
+  
+ActionView::Template::Error (Error: no mixin named card-list
+        on line 46:12 of app/assets/stylesheets/transactions.scss
+>>   @include card-list
+
+   -----------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/transactions.scss:46
+app/views/layouts/application.html.erb:8
+Started GET "/transactions" for ::1 at 2020-10-07 08:56:56 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 108.7ms | ActiveRecord: 0.4ms | Allocations: 28381)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:56:59 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 6340)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:57:49 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 807)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms | Allocations: 10340)
+
+
+  
+ActionView::Template::Error (Error: no mixin named card-list
+        on line 43:12 of app/assets/stylesheets/transactions.scss
+>>   @include card-list
+
+   -----------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/transactions.scss:43
+app/views/layouts/application.html.erb:8
+Started GET "/transactions" for ::1 at 2020-10-07 08:58:35 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.4ms | Allocations: 25895)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:58:37 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (4.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 4.7ms | Allocations: 6336)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 08:59:43 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 807)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 12175)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "  }": expected selector or at-rule, was "}"
+        on line 78:4 of app/assets/stylesheets/transactions.scss
+>>   }
+
+   ---^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/transactions.scss:78
+app/views/layouts/application.html.erb:8
+Started GET "/transactions" for ::1 at 2020-10-07 09:00:22 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.5ms | Allocations: 25891)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:00:24 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.9ms | Allocations: 6326)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:00:59 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.3ms | Allocations: 27539)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:02:03 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 1.0ms | Allocations: 28011)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:02:08 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 6330)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:03:22 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.2ms | Allocations: 24909)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:08:54 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1121)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 6920)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:08:55 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5615)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:09:35 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 1.1ms | Allocations: 24620)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:09:36 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:6
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.0ms | Allocations: 5619)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:10:30 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.8ms | Allocations: 6891)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:11:17 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1108)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 6899)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:11:18 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (2.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 2.5ms | Allocations: 5623)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:11:53 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 64.0ms | ActiveRecord: 1.3ms | Allocations: 27050)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:12:04 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 6560)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:12:17 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 5611)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:12:18 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 6334)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:12:53 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 81.5ms | ActiveRecord: 0.5ms | Allocations: 29605)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:12:54 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.5ms | Allocations: 6326)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:12:59 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.3ms | Allocations: 26321)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:13:00 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 6331)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:13:13 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.2ms | Allocations: 25597)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:13:36 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 6900)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:13:37 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 5617)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:15:54 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (5.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 732)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 5.3ms | Allocations: 8916)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "}": expected "}", was ""
+        on line 99:2 of app/assets/stylesheets/transactions.scss
+>> }
+
+   -^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/transactions.scss:99
+app/views/layouts/application.html.erb:8
+Started GET "/groups" for ::1 at 2020-10-07 09:16:29 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.4ms | Allocations: 24398)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:16:33 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 1.4ms | Allocations: 7093)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:18:38 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 59.5ms | ActiveRecord: 0.3ms | Allocations: 30153)
+
+
+Started GET "/transactions" for ::1 at 2020-10-07 09:18:42 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/index.html.erb:14
+  Rendered transactions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 6337)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:25:18 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.5ms | Allocations: 5688)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:26:04 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.8ms | Allocations: 23603)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 09:26:05 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 5608)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:31:05 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 97.7ms | ActiveRecord: 1.8ms | Allocations: 24262)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:31:40 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.4ms | Allocations: 6907)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:32:37 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.3ms | Allocations: 6914)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:32:38 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:4
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms | Allocations: 5629)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:32:55 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:5
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 6910)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:32:56 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:5
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 5630)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:34:26 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.3ms | Allocations: 30156)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:34:27 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (2.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 2.0ms | Allocations: 5621)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:34:28 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5620)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:34:45 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.3ms | Allocations: 24690)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:34:46 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 5611)
+
+
+Started GET "/groups" for ::1 at 2020-10-07 10:34:49 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5627)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:35:38 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 40.5ms | Allocations: 3802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 8741)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:36:39 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 447)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 6233)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:36:40 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 5180)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:37:27 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 24632)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:37:58 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 24633)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:45:01 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 5178)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:46:36 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 456)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms | Allocations: 25728)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:47:04 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 450)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 6246)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:48:05 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms | Allocations: 24653)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:48:06 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 5172)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:48:38 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 24243)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:48:38 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 5166)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:48:39 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 5159)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:50:22 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 24933)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:50:56 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 24661)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:52:03 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 24250)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:52:04 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 5163)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:52:10 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 24190)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:52:25 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms | Allocations: 24695)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:52:26 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 5168)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:52:43 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms | Allocations: 24215)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:53:06 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms | Allocations: 25107)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:53:19 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 5161)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-07 10:53:20 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 6257)
+
+
