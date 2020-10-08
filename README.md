@@ -91,6 +91,14 @@ STYLES CHECKLIST
   - ~~show~~
   - ~~edit~~
 
+### feature/finishing_touches
+
+- Implement many-to-many for groups/transactions
+- Implement external transactions scope
+- Extra feature
+- Implement correct typography
+- Implement user/group photos/icons
+
 ## Project Ideas 
 
 Anything that you can share with other people and group by some category.
