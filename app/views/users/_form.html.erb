@@ -1,0 +1,13 @@
+<%= form_with(model: @user) do |form| %>
+  <div class="field-wrapper">
+    <%= form.label :name, "Name:" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field-wrapper">
+    <%= form.label :avatar, "Profile Picture:" %>
+    <%= form.file_field :avatar %>
+  </div>
+
+  <%= form.submit "Submit" %>
+<% end %>

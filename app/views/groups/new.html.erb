@@ -1,0 +1,13 @@
+<div class="new-group">
+  <div class="banner">
+    <h1>New Group</h1>
+  </div>
+
+  <%= form_with(model: @group) do |form| %>
+    <div class="field-wrapper">
+      <%= form.label :name, "Name:" %>
+      <%= form.text_field :name %>
+    </div>
+    <%= form.submit "Create" %>
+  <% end %>
+</div>

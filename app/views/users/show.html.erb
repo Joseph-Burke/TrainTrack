@@ -1,0 +1,15 @@
+<div class="users-show">
+
+  <div class="header">
+    <div class="profile-picture"></div>  
+    <h2 class="username"><%= @user.name %></h2>
+  </div>
+
+  <ul class="links">
+    <li><%= link_to "Transactions", transactions_path %></li>
+    <li><%= link_to "External Transactions", transactions_path %></li>
+    <li><%= link_to "Groups", groups_path %></li>
+  </ul>
+
+
+</div>

@@ -1,0 +1,37 @@
+
+<div class="transactions-new">
+  <div class="banner">
+    <h1>New Transaction</h1>
+  </div>  
+
+
+  <%= form_with(model: @transaction) do |form| %>
+
+    <div class="field-wrapper">
+      <%= form.label :group_id, "Group:" %>
+
+      <div class="input">
+        <% @groups.each do |group| %>
+          <div>
+            <%= form.label :group_id, group.name %>
+            <%= form.radio_button(:group_id, group.id) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    </br>
+
+    <div class="field-wrapper">
+      <%= form.label :name, "Name:" %>
+      <%= form.text_field :name %></br>
+    </div>
+    <div class="field-wrapper">
+      <%= form.label :amount, "Amount:" %>
+      <%= form.text_field :amount %></br>
+    </div>
+
+    <%= form.submit "Submit" %>
+  <% end %>
+
+</div>

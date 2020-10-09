@@ -1,0 +1,29 @@
+<div class="transaction-show">
+
+  <div class="banner">
+    <h1>Transaction Details</h1>
+  </div>
+
+  <div class="transaction-card">
+    <div class="header">
+      <div class="title-wrapper">
+        <div class="image"></div>
+        <h2 class="title"><%= @transaction.name %></h2>
+      </div>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Sed iaculis justo a mauris volutpat, at scelerisque lectus pellentesque. Duis 
+      vel arcu at felis lacinia elementum. Donec commodo ex id mi efficitur tempor. 
+      Nam et ex sollicitudin, sagittis risus ac, sagittis justo.</p>
+    </div>
+
+    <div class="info">
+      <p><%= "Transaction ID: #{@transaction.id}" %></p>
+      <p class="date">
+        <%= "#{format_date(@transaction.created_at.to_date)}"%>
+      </p>
+    </div>
+    <div class="amount">
+      <h4>TOTAL PAYMENT</h4>
+      <span><%= "#{@transaction.amount} hours" %></span>
+    </div>
+  </div>
