@@ -14,8 +14,14 @@
  *= require_self
  */
 
+@font-face {
+  font-family: "Proxima-Nova-Bold";
+  src: url("/Proxima-Nova-Bold.otf");
+}
+
 html {
   font-size: 20px;
+  font-family: "Proxima-Nova-Bold";
 
   body {
     margin: 0;

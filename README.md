@@ -1,115 +1,68 @@
-# Ruby On Rails Capstone
+# Project Name
 
-## Task List
+> TrainTrack is a time-tracking web application for recording time spent training or caring for a pet.
 
-### feature/project_setup
-1. ~~Initialise Git Flow~~
-1. ~~Create a new rails project with postgres option. Ensure it is in root directory of repository.~~
-1. ~~Set up Rubocop and Stylelint.~~
-1. ~~Initialise RSpec.~~
-1. ~~Decide on a function/subject matter for the project.~~
-1. ~~Change the project's name.~~
-1. ~~Merge into development.~~
+![screenshot](./app_screenshot.png)
 
-### feature/data_architecture
-1. ~~Create a data architecture diagram and add it to the docs folder.~~
-2. ~~Generate models and/or migrations according to the data architecture diagram, including associations and validations.~~
-3. ~~Set up Active Storage for images/icons. Group model should have_one_attached :icon.~~
-3. ~~Setup and migrate databases.~~
+> Using TrainTrack, you and your friends or family can see the time you've devoted to caring for a pet animal.
 
-NOTE: the data architecture is a bit of a mess right now. The table I have been given to mirror is not very good. Continue work for now, but I may need to return later to make adjustments.
+## Built With
 
-### feature/routes_and_actions
-1. ~~Add a sessions controller to handle log-ins.~~
-1. ~~Set up primary routes for the application.~~
-2. ~~Create corresponding controller actions for these main routes.~~
-    - ~~User - new, create, index, show~~
-    - ~~Group - new, create, index, show~~
-    - ~~Transaction - new, create, index, show~~
-    - ~~Session - new, create, destroy~~
+- Ruby on Rails
+- Sass
+- 
 
-### feature/user_story
-This branch will go through the user story and ensure that all functionality is in place at each part of the application. The following aspects of the user story should be in place by the conclusion of this feature branch.
+## Live Demo
 
-  - ~~Create a helper method to access the current_user~~
-1. ~~Ensure that all attempts to access the application will redirect to the log in page if the user has not yet logged in.~~
-  - 
-2. Ensure that validations take place to deal with the scenario of a user inputting a name that is not an existing user's.
-3. Ensure that validations exist that will prevent two users from having the same name.
-4. ~~The user will then be presented with a User profile page that includes links to:~~
-  - ~~All my transactions~~
-  - ~~All my external transactions~~
-    - ISSUE: Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.
-  - All groups
-    ISSUE: Postgres won't accept a new element in the database that doesn't have a group_id attached to it.
+[Live Demo Link](https://livedemo.com)
 
-5. When a user opens "All my transactions" page;
-  - ~~Total amount is displayed at the top.~~
-  - ~~A list of transactions created by the logged in user is displayed~~
-  - ~~Each transaction displays its name, amount and date, and an icon of the first group it has been assigned to.~~
-    - ISSUE: Groups do not yet have icons.
-    - ISSUE: Transactions have timestamps but no 'date' row.
-6. When a user opens "All my external transactions"
-  - A list of all transactions that are created by the logged-in user but not assigned to a group
-  - ISSUE: There is no external transactions page yet.
-7. When the user opens "All groups"
-  - ~~A list of all groups is displayed.~~
-  - Each group displays its icon, name and creation date.
-  - ~~Each group is clickable and opens "Group transactions" page~~
-  - ~~An action button "Create new" is displayed.~~
-7. When the user opens "Group transactions"
-  - ~~A list if transactions that belong to that group is displayed.~~
-  - ~~The author of each transaction is also visible.~~
-8. When a user opens "Create new group" or "Add new transaction":
-  - A form with all necessary fields is displayed.
-  ISSUE: Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.
 
-### List of all issues
-1. I need to figure out how to get images attached to my groups and users.
-2. There is no external transactions page yet. - 
+## Getting Started
 
-1. ~~Although external transactions are being displayed, a transaction without a group is not yet possible because of the belongs_to relationship.~~
-4. ~~Transactions have timestamps but no 'date' row.~~
-6. ~~Although the correct information is appearing in the parameters from the new transaction form, the new Transaction is not being saved to the database.~~ 
+**This is an example of how you may give instructions on setting up your project locally.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
-### feature/styles
 
-STYLES CHECKLIST
-- Groups
-  - ~~index~~
-  - ~~new~~
-  - ~~show~~
-- Sessions
-  - ~~new~~
-- Transactions
-  - ~~index~~
-  - ~~new~~
-  - ~~show~~
-- Users
-  - ~~index~~
-  - ~~new~~
-  - ~~show~~
-  - ~~edit~~
+To get a local copy up and running follow these simple example steps.
 
-### feature/finishing_touches
+### Prerequisites
 
-- Implement many-to-many for groups/transactions
-- Implement external transactions scope
-- Extra feature
-- Implement correct typography
-- Implement user/group photos/icons
+### Setup
 
-## Project Ideas 
+### Install
 
-Anything that you can share with other people and group by some category.
+### Usage
 
-- Hours spent minding the dog. TrainTrack.
-  - This app would allow a group of people that are training a dog to record the time spent training/minding her.
-  - Possible bonus feature would be pre-made tasks such as "30-minute walk", "20 minutes of playtime" and "15 minutes of relaxation exercises"
-  - Names: 
-    - TrainTrack
+### Run tests
 
-What do you spend time doing in association with other people?
-It could be a time management app for a small startup like Late?
-A time management application for a group of developers?
+### Deployment
 
+
+
+## Author
+
+👤 **Joseph Burke**
+
+  **Say hello! I don't bite.**
+
+- Github: [@Joseph-Burke](https://github.com/Joseph-Burke)
+- Twitter: [@__joeburke](https://twitter.com/__joeburke)
+- LinkedIn: [Joseph Burke](https://www.linkedin.com/in/joseph-burke-b7a8261a5)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.

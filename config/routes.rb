@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users, except: [:destroy]
   resources :groups, only: [:new, :create, :index, :show]
   resources :transactions, only: [:new, :create, :index, :show]
+  get '/external_transactions', to: 'transactions#external_transactions'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

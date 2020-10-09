@@ -24,6 +24,13 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.find(params[:id])
   end
 
+  def external_transactions
+    @transactions = GroupTransaction.where(group_id: nil, transaction_id: 1).map do |group_transaction| 
+      group_transaction.owner 
+    end
+
+  end
+
   private
 
   def transaction_params

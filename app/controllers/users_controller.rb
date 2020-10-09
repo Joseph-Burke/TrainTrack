@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  # skip_before_action :return_to_login_page, only: [:new, :create]
   def index
     redirect_to root_path if session[:user_id].nil?
     @users = User.all
