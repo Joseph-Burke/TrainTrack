@@ -25,10 +25,7 @@ class TransactionsController < ApplicationController
   end
 
   def external_transactions
-    @transactions = GroupTransaction.where(group_id: nil, transaction_id: 1).map do |group_transaction| 
-      group_transaction.owner 
-    end
-
+    @transactions = GroupTransaction.where(group_id: nil, transaction_id: 1).map(&:owner)
   end
 
   private
