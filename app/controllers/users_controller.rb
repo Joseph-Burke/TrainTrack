@@ -9,9 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    @user.save
-    redirect_to user_path(@user)
+    user = User.create!(user_params)
+    session[:user_id] = user.id
+    user.avatar.attach(params[:user][:avatar])
+    redirect_to user_path(user)
   end
 
   def show

@@ -1,7 +1,7 @@
 <div class="users-show">
 
   <div class="header">
-    <div class="profile-picture"></div>  
+    <img class="profile-picture" src="<%= url_for(@user.avatar) %>">
     <h2 class="username"><%= @user.name %></h2>
   </div>
 

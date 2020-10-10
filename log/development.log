@@ -15473,3 +15473,550 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 10.8ms | Allocations: 8463)
 
 
+Started GET "/users/new" for ::1 at 2020-10-10 10:13:36 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 427)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 487)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 8789)
+
+
+Started POST "/users" for ::1 at 2020-10-10 10:13:50 +0100
+Processing by UsersController#create as JS
+  Parameters: {"authenticity_token"=>"TF/AQ+5UN+dzWPc6y0S6MnJyzRzxL7L92MNJFFnt774h7yC77qfmKNO/HF2pc5QwxMaiaMmNdoK4xSkgQcoCYQ==", "user"=>{"name"=>"test_one", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007fa92c6f1080 @tempfile=#<Tempfile:/var/folders/r9/3nsgn1hs1y98xrlnqlgk1zy40000gn/T/RackMultipart20201010-71215-oxwyzk.heic>, @original_filename="20200810_190031870_iOS.heic", @content_type="image/heic", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"20200810_190031870_iOS.heic\"\r\nContent-Type: image/heic\r\n">}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (12.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test_one"], ["created_at", "2020-10-10 09:13:50.964327"], ["updated_at", "2020-10-10 09:13:50.964327"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Load (3.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 200 OK in 48ms (ActiveRecord: 23.7ms | Allocations: 7502)
+
+
+Started GET "/users/5" for ::1 at 2020-10-10 10:13:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 12.4ms | ActiveRecord: 1.1ms | Allocations: 10055)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-10-10 10:34:19 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 357)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 5352)
+
+
+Started GET "/users/new" for ::1 at 2020-10-10 10:34:24 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.0ms | Allocations: 427)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 487)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 8793)
+
+
+Started POST "/users" for ::1 at 2020-10-10 10:34:33 +0100
+Processing by UsersController#create as JS
+  Parameters: {"authenticity_token"=>"Sx3jazjR/lvsbL94nA8dTCPm96UgiagWGRkgBZPWuoqJNVXgDSlXW/TKARe/yTpzVGFo/qThmZgz77RcX3rZ6w==", "user"=>{"name"=>"test_two", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007fa92e23dbe0 @tempfile=#<Tempfile:/var/folders/r9/3nsgn1hs1y98xrlnqlgk1zy40000gn/T/RackMultipart20201010-71215-8sahjk.jpg>, @original_filename="20200810_190456583_iOS.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"20200810_190456583_iOS.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test_two"], ["created_at", "2020-10-10 09:34:33.712914"], ["updated_at", "2020-10-10 09:34:33.712914"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mActiveStorage::Blob Load (10.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mActiveStorage::Blob Create (1.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "50deiryjp8ds1294wdamnbxrfbw2"], ["filename", "20200810_190456583_iOS.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 2264818], ["checksum", "Kol3CFzUiQ7Wt7AnJYXWjQ=="], ["created_at", "2020-10-10 09:34:33.835550"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mActiveStorage::Attachment Create (2.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 6], ["blob_id", 1], ["created_at", "2020-10-10 09:34:33.839994"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 09:34:33.844547"], ["id", 6]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+[36m  Disk Storage (10.1ms) [0m[32mUploaded file to key: 50deiryjp8ds1294wdamnbxrfbw2 (checksum: Kol3CFzUiQ7Wt7AnJYXWjQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 68a7ad31-83c1-4ea0-99c1-f0ed9103c751) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fa92aa18ff8 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/1>>
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Destroy (1.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 09:34:33.905603"], ["id", 6]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 83202430-fcd9-41b5-a371-5c987cd5dd9a) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007fa929afbc00 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/users/6
+Completed 200 OK in 206ms (ActiveRecord: 33.1ms | Allocations: 72459)
+
+
+Started GET "/users/6" for ::1 at 2020-10-10 10:34:33 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [68a7ad31-83c1-4ea0-99c1-f0ed9103c751] Performing ActiveStorage::AnalyzeJob (Job ID: 68a7ad31-83c1-4ea0-99c1-f0ed9103c751) from Async(active_storage_analysis) enqueued at 2020-10-10T09:34:33Z with arguments: #<GlobalID:0x00007fa92a9c98e0 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/1>>
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 83)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [68a7ad31-83c1-4ea0-99c1-f0ed9103c751] [36m  Disk Storage (2.1ms) [0m[34mDownloaded file from key: 50deiryjp8ds1294wdamnbxrfbw2[0m
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a] Performing ActiveStorage::PurgeJob (Job ID: 83202430-fcd9-41b5-a371-5c987cd5dd9a) from Async(active_storage_purge) enqueued at 2020-10-10T09:34:33Z with arguments: #<GlobalID:0x00007fa92e3bfc70 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a]   [1m[36mActiveStorage::Attachment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a]   [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a]   [1m[36mActiveStorage::Blob Destroy (1.9ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 54.8ms | ActiveRecord: 1.4ms | Allocations: 23878)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a]   [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [68a7ad31-83c1-4ea0-99c1-f0ed9103c751] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a] [36m  Disk Storage (2.6ms) [0m[31mDeleted file from key: 50deiryjp8ds1294wdamnbxrfbw2[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/50deiryjp8ds1294wdamnbxrfbw2/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [83202430-fcd9-41b5-a371-5c987cd5dd9a] Performed ActiveStorage::PurgeJob (Job ID: 83202430-fcd9-41b5-a371-5c987cd5dd9a) from Async(active_storage_purge) in 51.22ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [68a7ad31-83c1-4ea0-99c1-f0ed9103c751]   [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [68a7ad31-83c1-4ea0-99c1-f0ed9103c751]   [1m[36mActiveStorage::Blob Update (4.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [68a7ad31-83c1-4ea0-99c1-f0ed9103c751]   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [68a7ad31-83c1-4ea0-99c1-f0ed9103c751] Performed ActiveStorage::AnalyzeJob (Job ID: 68a7ad31-83c1-4ea0-99c1-f0ed9103c751) from Async(active_storage_analysis) in 75.29ms
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-10-10 10:43:47 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 357)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5346)
+
+
+Started GET "/users/new" for ::1 at 2020-10-10 10:43:56 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.0ms | Allocations: 427)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 487)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 8767)
+
+
+Started POST "/users" for ::1 at 2020-10-10 10:44:05 +0100
+Processing by UsersController#create as JS
+  Parameters: {"authenticity_token"=>"VOpbgFUhRaRLrJ+6eVcFn9r6Dn1ExVrnWEKy2Sv4DHOWwu0LYNnspFMKIdVakSKgrX2RJsCta2lytCaA51RvEg==", "user"=>{"name"=>"test_three", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007fa92a5e9dd8 @tempfile=#<Tempfile:/var/folders/r9/3nsgn1hs1y98xrlnqlgk1zy40000gn/T/RackMultipart20201010-71215-1glfazp.jpg>, @original_filename="20200810_190456583_iOS.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"20200810_190456583_iOS.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test_three"], ["created_at", "2020-10-10 09:44:05.684914"], ["updated_at", "2020-10-10 09:44:05.684914"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "tz9rti1vgcug1kxic71t3rq28tce"], ["filename", "20200810_190456583_iOS.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 2264818], ["checksum", "Kol3CFzUiQ7Wt7AnJYXWjQ=="], ["created_at", "2020-10-10 09:44:05.727090"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 7], ["blob_id", 2], ["created_at", "2020-10-10 09:44:05.730178"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 09:44:05.732639"], ["id", 7]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+[36m  Disk Storage (8.4ms) [0m[32mUploaded file to key: tz9rti1vgcug1kxic71t3rq28tce (checksum: Kol3CFzUiQ7Wt7AnJYXWjQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 4bb0ddc3-6713-46f4-896c-e9b3ccce6400) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fa92990b788 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/2>>
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 09:44:05.751952"], ["id", 7]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 17754155-a735-4adb-9013-f12edfd43d0e) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007fa92a2c4658 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/2>>
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 5.8ms | Allocations: 31252)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:15:in `create'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4bb0ddc3-6713-46f4-896c-e9b3ccce6400] Performing ActiveStorage::AnalyzeJob (Job ID: 4bb0ddc3-6713-46f4-896c-e9b3ccce6400) from Async(active_storage_analysis) enqueued at 2020-10-10T09:44:05Z with arguments: #<GlobalID:0x00007fa92a41ac78 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4bb0ddc3-6713-46f4-896c-e9b3ccce6400] [36m  Disk Storage (2.0ms) [0m[34mDownloaded file from key: tz9rti1vgcug1kxic71t3rq28tce[0m
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e] Performing ActiveStorage::PurgeJob (Job ID: 17754155-a735-4adb-9013-f12edfd43d0e) from Async(active_storage_purge) enqueued at 2020-10-10T09:44:05Z with arguments: #<GlobalID:0x00007fa92e1bdaf8 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e]   [1m[36mActiveStorage::Attachment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4bb0ddc3-6713-46f4-896c-e9b3ccce6400] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e]   [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4bb0ddc3-6713-46f4-896c-e9b3ccce6400]   [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e]   [1m[36mActiveStorage::Blob Destroy (1.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e]   [1m[35m (34.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4bb0ddc3-6713-46f4-896c-e9b3ccce6400]   [1m[36mActiveStorage::Blob Update (36.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e] [36m  Disk Storage (0.6ms) [0m[31mDeleted file from key: tz9rti1vgcug1kxic71t3rq28tce[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e] [36m  Disk Storage (0.2ms) [0m[31mDeleted files by key prefix: variants/tz9rti1vgcug1kxic71t3rq28tce/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [17754155-a735-4adb-9013-f12edfd43d0e] Performed ActiveStorage::PurgeJob (Job ID: 17754155-a735-4adb-9013-f12edfd43d0e) from Async(active_storage_purge) in 64.28ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4bb0ddc3-6713-46f4-896c-e9b3ccce6400]   [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4bb0ddc3-6713-46f4-896c-e9b3ccce6400] Performed ActiveStorage::AnalyzeJob (Job ID: 4bb0ddc3-6713-46f4-896c-e9b3ccce6400) from Async(active_storage_analysis) in 90.64ms
+Started GET "/users/new" for ::1 at 2020-10-10 10:44:20 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 427)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 487)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 6.8ms | ActiveRecord: 5.0ms | Allocations: 8973)
+
+
+Started POST "/users" for ::1 at 2020-10-10 10:44:30 +0100
+Processing by UsersController#create as JS
+  Parameters: {"authenticity_token"=>"b7J5vrjylaR5CS6sfGVj8tKChTEa0V/YbYuHK5mDoswCAplGuAFEa9nuxcseUk3wZDbqRSJzm6cNjecfgaRPEw==", "user"=>{"name"=>"user_four", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007fa92e32e450 @tempfile=#<Tempfile:/var/folders/r9/3nsgn1hs1y98xrlnqlgk1zy40000gn/T/RackMultipart20201010-71215-1y0kamk.jpg>, @original_filename="20200810_190511661_iOS.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"20200810_190511661_iOS.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user_four"], ["created_at", "2020-10-10 09:44:30.595798"], ["updated_at", "2020-10-10 09:44:30.595798"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "qi3w32kq73hve68g5ls465c443fn"], ["filename", "20200810_190511661_iOS.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 2040297], ["checksum", "wftKwrV/BdI7FJVdk5fJWQ=="], ["created_at", "2020-10-10 09:44:30.628622"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 8], ["blob_id", 3], ["created_at", "2020-10-10 09:44:30.630561"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 09:44:30.632183"], ["id", 8]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+[36m  Disk Storage (6.4ms) [0m[32mUploaded file to key: qi3w32kq73hve68g5ls465c443fn (checksum: wftKwrV/BdI7FJVdk5fJWQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0321b352-a8c8-45b6-b966-76d8ddc5d9f5) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fa9299331e8 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/3>>
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0321b352-a8c8-45b6-b966-76d8ddc5d9f5] Performing ActiveStorage::AnalyzeJob (Job ID: 0321b352-a8c8-45b6-b966-76d8ddc5d9f5) from Async(active_storage_analysis) enqueued at 2020-10-10T09:44:30Z with arguments: #<GlobalID:0x00007fa92c73a208 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/3>>
+  [1m[36mActiveStorage::Attachment Destroy (1.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 09:44:30.648358"], ["id", 8]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0321b352-a8c8-45b6-b966-76d8ddc5d9f5] [36m  Disk Storage (6.5ms) [0m[34mDownloaded file from key: qi3w32kq73hve68g5ls465c443fn[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 7aa07f43-4842-4ede-bb9b-f3ec122c377f) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007fa92aa91750 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/3>>
+Redirected to http://localhost:3000/users/8
+Completed 200 OK in 63ms (ActiveRecord: 9.2ms | Allocations: 31768)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0321b352-a8c8-45b6-b966-76d8ddc5d9f5] Skipping image analysis because the mini_magick gem isn't installed
+Started GET "/users/8" for ::1 at 2020-10-10 10:44:30 +0100
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0321b352-a8c8-45b6-b966-76d8ddc5d9f5]   [1m[35m (6.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (10.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f] Performing ActiveStorage::PurgeJob (Job ID: 7aa07f43-4842-4ede-bb9b-f3ec122c377f) from Async(active_storage_purge) enqueued at 2020-10-10T09:44:30Z with arguments: #<GlobalID:0x00007fa929b23ed0 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/3>>
+Processing by UsersController#show as HTML
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f]   [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"id"=>"8"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0321b352-a8c8-45b6-b966-76d8ddc5d9f5]   [1m[36mActiveStorage::Blob Update (5.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f]   [1m[36mActiveStorage::Attachment Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0321b352-a8c8-45b6-b966-76d8ddc5d9f5]   [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0321b352-a8c8-45b6-b966-76d8ddc5d9f5] Performed ActiveStorage::AnalyzeJob (Job ID: 0321b352-a8c8-45b6-b966-76d8ddc5d9f5) from Async(active_storage_analysis) in 44.6ms
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f]   [1m[36mActiveStorage::Blob Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 3]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 8]]
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f]   [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f] [36m  Disk Storage (4.1ms) [0m[31mDeleted file from key: qi3w32kq73hve68g5ls465c443fn[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/qi3w32kq73hve68g5ls465c443fn/[0m
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 83)
+[ActiveJob] [ActiveStorage::PurgeJob] [7aa07f43-4842-4ede-bb9b-f3ec122c377f] Performed ActiveStorage::PurgeJob (Job ID: 7aa07f43-4842-4ede-bb9b-f3ec122c377f) from Async(active_storage_purge) in 25.33ms
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 7.6ms | ActiveRecord: 3.7ms | Allocations: 17629)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+Started GET "/users/8" for ::1 at 2020-10-10 10:53:48 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered users/show.html.erb within layouts/application (Duration: 231.3ms | Allocations: 150398)
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 6.1ms | Allocations: 153554)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fa92a2f0f00>:0x00007fa92a2b5d38>
+Did you mean?  @user):
+    1: <div class="users-show">
+    2: 
+    3:   <div class="header">
+    4:     <img class="profile-picture" src="<%= url_for(user.avatar) %>">
+    5:     <h2 class="username"><%= @user.name %></h2>
+    6:   </div>
+    7: 
+  
+app/views/users/show.html.erb:4
+Started GET "/users/8" for ::1 at 2020-10-10 10:53:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2472)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.6ms | Allocations: 5493)
+
+
+  
+ActionView::Template::Error (to_model delegated to attachment, but attachment is nil):
+    1: <div class="users-show">
+    2: 
+    3:   <div class="header">
+    4:     <img class="profile-picture" src="<%= url_for(@user.avatar) %>">
+    5:     <h2 class="username"><%= @user.name %></h2>
+    6:   </div>
+    7: 
+  
+app/views/users/show.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1836884956550690760)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1836884956550690760)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/8" for ::1 at 2020-10-10 11:10:57 +0100
+  
+SyntaxError (/Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/users_controller.rb:15: syntax error, unexpected ':', expecting `end'
+    io: File.open("/path/to/face.jpg...
+      ^
+/Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+...File.open("/path/to/face.jpg"), filename: "face.jpg", conten...
+...                              ^
+/Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+...ce.jpg"), filename: "face.jpg", content_type: "image/jpg"
+...                              ^
+):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+app/controllers/users_controller.rb:15: syntax error, unexpected ',', expecting `end'
+Started GET "/users/8" for ::1 at 2020-10-10 11:11:07 +0100
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+actionpack (6.0.3.3) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-10 11:11:16 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 550)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 6169)
+
+
+Started GET "/users/new" for ::1 at 2020-10-10 11:11:18 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.2ms | Allocations: 611)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 904)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 9.9ms | ActiveRecord: 10.1ms | Allocations: 9565)
+
+
+Started POST "/users" for ::1 at 2020-10-10 11:11:30 +0100
+Processing by UsersController#create as JS
+  Parameters: {"authenticity_token"=>"AQs7jrPzvzQU01L+qrMh2oloOi9TuVRqhpkpoxIxSOTDI40FhgsWNAx17JGJdQbl/u+ldNfRZeSsb7363p0rhQ==", "user"=>{"name"=>"test_five", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007fa92e434250 @tempfile=#<Tempfile:/var/folders/r9/3nsgn1hs1y98xrlnqlgk1zy40000gn/T/RackMultipart20201010-71215-19uylu3.jpg>, @original_filename="20200810_190504338_iOS.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"20200810_190504338_iOS.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test_five"], ["created_at", "2020-10-10 10:11:30.661041"], ["updated_at", "2020-10-10 10:11:30.661041"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "e6h2jil9o11pc0wzgs1gdp2yrsu9"], ["filename", "20200810_190504338_iOS.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 2210660], ["checksum", "9noMfq1BnpR0JWure8fpVQ=="], ["created_at", "2020-10-10 10:11:30.709596"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 9], ["blob_id", 4], ["created_at", "2020-10-10 10:11:30.711738"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 10:11:30.713554"], ["id", 9]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+[36m  Disk Storage (6.9ms) [0m[32mUploaded file to key: e6h2jil9o11pc0wzgs1gdp2yrsu9 (checksum: 9noMfq1BnpR0JWure8fpVQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fa92e347950 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/4>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "5nxxukzl88yeyxytlmngfe3um8ku"], ["filename", "20200810_190504338_iOS.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 2210660], ["checksum", "9noMfq1BnpR0JWure8fpVQ=="], ["created_at", "2020-10-10 10:11:30.737453"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 9], ["blob_id", 5], ["created_at", "2020-10-10 10:11:30.739804"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-10-10 10:11:30.742287"], ["id", 9]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd] Performing ActiveStorage::AnalyzeJob (Job ID: 8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd) from Async(active_storage_analysis) enqueued at 2020-10-10T10:11:30Z with arguments: #<GlobalID:0x00007fa92a8d2388 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd] [36m  Disk Storage (2.1ms) [0m[34mDownloaded file from key: e6h2jil9o11pc0wzgs1gdp2yrsu9[0m
+[36m  Disk Storage (18.3ms) [0m[32mUploaded file to key: 5nxxukzl88yeyxytlmngfe3um8ku (checksum: 9noMfq1BnpR0JWure8fpVQ==)[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: e2f53396-a7a7-4611-8347-599e2729efd5) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007fa929a06d40 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/4>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 62353538-7954-4ac1-929b-9aa240749039) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fa9299f5158 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/5>>
+Redirected to http://localhost:3000/users/9
+Completed 200 OK in 109ms (ActiveRecord: 10.9ms | Allocations: 44819)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd]   [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/9" for ::1 at 2020-10-10 11:11:30 +0100
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd]   [1m[36mActiveStorage::Blob Update (7.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd]   [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd] Performed ActiveStorage::AnalyzeJob (Job ID: 8bb9f1f9-cfb2-4220-b59b-d65d2512a5dd) from Async(active_storage_analysis) in 43.72ms
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5056)
+  [1m[36mActiveStorage::Blob Load (3.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5] Performing ActiveStorage::PurgeJob (Job ID: e2f53396-a7a7-4611-8347-599e2729efd5) from Async(active_storage_purge) enqueued at 2020-10-10T10:11:30Z with arguments: #<GlobalID:0x00007fa92e1de0a0 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/4>>
+  [1m[36mActiveStorage::Blob Load (6.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039] Performing ActiveStorage::AnalyzeJob (Job ID: 62353538-7954-4ac1-929b-9aa240749039) from Async(active_storage_analysis) enqueued at 2020-10-10T10:11:30Z with arguments: #<GlobalID:0x00007fa929996d38 @uri=#<URI::GID gid://group-our-transactions/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5]   [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5]   [1m[36mActiveStorage::Attachment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039] [36m  Disk Storage (3.8ms) [0m[34mDownloaded file from key: 5nxxukzl88yeyxytlmngfe3um8ku[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5]   [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5]   [1m[36mActiveStorage::Blob Destroy (1.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5]   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5] [36m  Disk Storage (0.5ms) [0m[31mDeleted file from key: e6h2jil9o11pc0wzgs1gdp2yrsu9[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/e6h2jil9o11pc0wzgs1gdp2yrsu9/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [e2f53396-a7a7-4611-8347-599e2729efd5] Performed ActiveStorage::PurgeJob (Job ID: e2f53396-a7a7-4611-8347-599e2729efd5) from Async(active_storage_purge) in 16.9ms
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 30.1ms | ActiveRecord: 8.1ms | Allocations: 26843)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039] Skipping image analysis because the mini_magick gem isn't installed
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e66423d1dc10ea2fecacc31243d3f9607341c1db/20200810_190504338_iOS.jpg" for ::1 at 2020-10-10 11:11:30 +0100
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039]   [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039]   [1m[36mActiveStorage::Blob Update (6.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e66423d1dc10ea2fecacc31243d3f9607341c1db", "filename"=>"20200810_190504338_iOS"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: 5nxxukzl88yeyxytlmngfe3um8ku (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMFQxMDoxNjozMC44OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b383ad3f8b6909f858f97ee60a6be9890f3489b3/20200810_190504338_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190504338_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190504338_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMFQxMDoxNjozMC44OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b383ad3f8b6909f858f97ee60a6be9890f3489b3/20200810_190504338_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190504338_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190504338_iOS.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 2245)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMFQxMDoxNjozMC44OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b383ad3f8b6909f858f97ee60a6be9890f3489b3/20200810_190504338_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190504338_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190504338_iOS.jpg" for ::1 at 2020-10-10 11:11:30 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190504338_iOS.jpg\"; filename*=UTF-8''20200810_190504338_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMFQxMDoxNjozMC44OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b383ad3f8b6909f858f97ee60a6be9890f3489b3", "filename"=>"20200810_190504338_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039]   [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039] Performed ActiveStorage::AnalyzeJob (Job ID: 62353538-7954-4ac1-929b-9aa240749039) from Async(active_storage_analysis) in 86.06ms
