@@ -15379,3 +15379,97 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 66ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 5194)
 
 
+Started GET "/" for ::1 at 2020-10-10 10:02:25 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 247ms (Views: 239.7ms | ActiveRecord: 0.0ms | Allocations: 53327)
+
+
+Started GET "/" for ::1 at 2020-10-10 10:03:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 549)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms | Allocations: 25613)
+
+
+Started GET "/" for ::1 at 2020-10-10 10:04:04 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 354)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms | Allocations: 24347)
+
+
+Started GET "/users/new" for ::1 at 2020-10-10 10:04:12 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.6ms | Allocations: 941)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1243)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 13.6ms | ActiveRecord: 11.8ms | Allocations: 10117)
+
+
+Started POST "/login" for ::1 at 2020-10-10 10:04:27 +0100
+Processing by SessionsController#create as JS
+  Parameters: {"authenticity_token"=>"oByXLZGEwafhHKoF/Zp6qgavLA4VqXVRt+20zujwKIfNrHfVkXcQaEH7QWKfrVSosBtDei0LsS7X69T68NfFWA==", "name"=>"Joe", "commit"=>"Enter"}
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 200 OK in 18ms (ActiveRecord: 9.5ms | Allocations: 1524)
+
+
+Started GET "/users/1" for ::1 at 2020-10-10 10:04:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTransaction Load (2.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 7.3ms | ActiveRecord: 8.7ms | Allocations: 14592)
+
+
+Started GET "/transactions" for ::1 at 2020-10-10 10:04:28 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 3.2ms | Allocations: 1070)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1366)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 4.9ms | Allocations: 7487)
+
+
+Started GET "/transactions" for ::1 at 2020-10-10 10:04:32 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 2.5ms | Allocations: 858)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 919)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 5.5ms | Allocations: 6460)
+
+
+Started GET "/groups" for ::1 at 2020-10-10 10:04:33 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (2.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  Rendered groups/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 3013)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 10.8ms | Allocations: 8463)
+
+
