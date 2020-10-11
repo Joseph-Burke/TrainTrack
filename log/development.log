@@ -16020,3 +16020,49 @@ Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 438)
 
 [ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039]   [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
 [ActiveJob] [ActiveStorage::AnalyzeJob] [62353538-7954-4ac1-929b-9aa240749039] Performed ActiveStorage::AnalyzeJob (Job ID: 62353538-7954-4ac1-929b-9aa240749039) from Async(active_storage_analysis) in 86.06ms
+Started GET "/users/9" for ::1 at 2020-10-11 17:43:42 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (2.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (4.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 52.8ms | Allocations: 2426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 77.0ms | ActiveRecord: 13.1ms | Allocations: 10174)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e66423d1dc10ea2fecacc31243d3f9607341c1db/20200810_190504338_iOS.jpg" for ::1 at 2020-10-11 17:43:43 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e66423d1dc10ea2fecacc31243d3f9607341c1db", "filename"=>"20200810_190504338_iOS"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (3.3ms) [0m[34mGenerated URL for file at key: 5nxxukzl88yeyxytlmngfe3um8ku (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMVQxNjo0ODo0My4xMTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--fab895bd58a2317842810657fa14a80142f46ec9/20200810_190504338_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190504338_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190504338_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMVQxNjo0ODo0My4xMTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--fab895bd58a2317842810657fa14a80142f46ec9/20200810_190504338_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190504338_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190504338_iOS.jpg
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms | Allocations: 1817)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMVQxNjo0ODo0My4xMTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--fab895bd58a2317842810657fa14a80142f46ec9/20200810_190504338_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190504338_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190504338_iOS.jpg" for ::1 at 2020-10-11 17:43:43 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190504338_iOS.jpg\"; filename*=UTF-8''20200810_190504338_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOVzU0ZUhWcmVtdzRPSGxsZVhoNWRHeHRibWRtWlROMWJUaHJkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EVXdORE16T0Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTFNRFF6TXpoZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMVQxNjo0ODo0My4xMTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--fab895bd58a2317842810657fa14a80142f46ec9", "filename"=>"20200810_190504338_iOS"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 401)
+
+
+Started GET "/users/9/edit" for ::1 at 2020-10-11 17:43:45 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 598)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 0.7ms | Allocations: 6451)
+
+
