@@ -7,13 +7,14 @@
   <div class="transaction-card">
     <div class="header">
       <div class="title-wrapper">
-        <div class="image"></div>
+        <% if @transaction.groups.empty? %>
+          <img class="image" src="https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg">
+        <% else %>
+          <img class="image" src= <%= "#{url_for(@transaction.groups.first.avatar)}" %>>
+        <% end%>
         <h2 class="title"><%= @transaction.name %></h2>
       </div>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Sed iaculis justo a mauris volutpat, at scelerisque lectus pellentesque. Duis 
-      vel arcu at felis lacinia elementum. Donec commodo ex id mi efficitur tempor. 
-      Nam et ex sollicitudin, sagittis risus ac, sagittis justo.</p>
+      <p class="description"><%= @transaction.description %></p>
     </div>
 
     <div class="info">

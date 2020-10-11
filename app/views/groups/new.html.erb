@@ -8,6 +8,11 @@
       <%= form.label :name, "Name:" %>
       <%= form.text_field :name %>
     </div>
+
+    <div class="field-wrapper">
+      <%= form.label :avatar, "Group Icon:" %>
+      <%= form.file_field :avatar %>
+    </div>
     <%= form.submit "Create" %>
   <% end %>
 </div>

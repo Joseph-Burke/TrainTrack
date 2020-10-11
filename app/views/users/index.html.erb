@@ -7,7 +7,14 @@
     <% @users.each do |user| %>
 
       <div class="card">
-        <div class="image"></div>
+      <img 
+        class="image" 
+        src= <%=
+          if user.avatar 
+            "#{url_for(user.avatar)}" 
+          else "https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg"
+          end %>
+        >
         
         <div class="card-body">
           <div class="details">

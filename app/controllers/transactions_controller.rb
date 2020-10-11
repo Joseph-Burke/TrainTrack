@@ -14,8 +14,12 @@ class TransactionsController < ApplicationController
 
   def create
     redirect_to root_path if session[:user_id].nil?
-    @transaction = User.find(session[:user_id]).transactions.build(transaction_params)
+    @transaction = Transaction.new(transaction_params.except(:group_ids))
+    @transaction.user_id = session[:user_id]
     @transaction.save
+    params[:transaction][:group_ids].select{ |n| !n.to_i.zero?}.each do |id| 
+      GroupTransaction.create(group_id: id.to_i, transaction_id: @transaction.id )
+    end
     redirect_to transaction_path(@transaction)
   end
 
@@ -31,6 +35,6 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:group_id, :name, :amount)
+    params.require(:transaction).permit(:name, :amount, :description)
   end
 end
