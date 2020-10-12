@@ -42,6 +42,17 @@
           font-size: 1.2rem;
         }
       }
+
+      .transaction-amount .button_to {
+        padding: 0;
+        margin: 0;
+        border: 0;
+
+        input {
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
 }

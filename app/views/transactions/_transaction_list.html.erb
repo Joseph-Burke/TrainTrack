@@ -4,23 +4,35 @@
 </div>
 
 <ul class="transactions-list">
-  <% if @transactions.empty? %>
-    <% @transactions.each do |transaction| %>
-      <div class="card">
-        <img 
-          class="image" 
-          src= <%= "#{url_for(transaction.groups.first.avatar)}" %>
-          >
-        <div class="card-body">
-          <div class="details">
-            <h5><%= transaction.name %></h5>
-            <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
-          </div>
-          <div class="transaction-amount">
-            <%= "#{transaction.amount} hours" %>
-          </div>
+  <% @transactions.each do |transaction| %>
+    <div class="card">
+    <% unless transaction.groups.empty? %>
+      <img 
+        class="image" 
+        src= <%= "#{url_for(transaction.groups.first.avatar)}" %>
+        >
+    <% end %>
+      <div class="card-body">
+        <div class="details">
+          <h5><%= transaction.name %></h5>
+          <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
+        </div>
+        <div class="transaction-amount">
+          <%= "#{transaction.amount} hours" %>
+          <%= button_to "Repeat Transaction",
+          {:controller => "transactions",
+          :action => "create",
+          :transaction=> {
+            name: transaction.name,
+            amount: transaction.amount,
+            description: transaction.description,
+            group_ids: transaction.groups.ids
+          }},
+          {:method=>:post}  
+          %>
+
         </div>
       </div>
-    <% end %>
+    </div>
   <% end %>
 </ul>

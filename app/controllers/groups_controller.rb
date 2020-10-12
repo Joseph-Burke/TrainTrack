@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   def index
     redirect_to root_path if session[:user_id].nil?
-    @groups = Group.all
+    @groups = Group.all.includes(avatar_attachment: [:blob])
   end
 
   def new
@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
   def show
     redirect_to root_path if session[:user_id].nil?
     @group = Group.find(params[:id])
-    @transactions = @group.transactions
+    @transactions = @group.transactions.includes(user: [avatar_attachment: :blob])
   end
 
   private

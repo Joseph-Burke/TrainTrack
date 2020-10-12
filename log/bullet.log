@@ -1,0 +1,158 @@
+2020-10-12 14:14:50[WARN] user: joe
+GET /users
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___3262593304125910534_22700'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___3262593304125910534_22700'
+
+2020-10-12 14:14:52[WARN] user: joe
+GET /users
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___3262593304125910534_22700'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___3262593304125910534_22700'
+
+2020-10-12 14:16:18[WARN] user: joe
+GET /users
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___3262593304125910534_22700'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___3262593304125910534_22700'
+
+2020-10-12 14:16:21[WARN] user: joe
+GET /users
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___3262593304125910534_22700'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___3262593304125910534_22700'
+
+2020-10-12 14:16:39[WARN] user: joe
+GET /users
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___1269487772385967212_22700'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___1269487772385967212_22700'
+
+2020-10-12 14:17:25[WARN] user: joe
+GET /users
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___701052042520729222_22720'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___701052042520729222_22720'
+
+2020-10-12 14:18:33[WARN] user: joe
+GET /users
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___701052042520729222_22720'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___701052042520729222_22720'
+
+2020-10-12 14:20:17[WARN] user: joe
+GET /users
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___701052042520729222_22720'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___701052042520729222_22720'
+
+2020-10-12 14:23:08[WARN] user: joe
+GET /groups
+USE eager loading detected
+  Group => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/index.html.erb:13:in `block in _app_views_groups_index_html_erb__720861371060450703_90880'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/index.html.erb:8:in `_app_views_groups_index_html_erb__720861371060450703_90880'
+
+2020-10-12 14:34:30[WARN] user: joe
+GET /groups/8
+USE eager loading detected
+  Transaction => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/show.html.erb:12:in `block in _app_views_groups_show_html_erb__556344755760158708_111940'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/show.html.erb:10:in `_app_views_groups_show_html_erb__556344755760158708_111940'
+
+2020-10-12 14:37:25[WARN] user: joe
+GET /groups/8
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/show.html.erb:12:in `block in _app_views_groups_show_html_erb__556344755760158708_111940'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/show.html.erb:10:in `_app_views_groups_show_html_erb__556344755760158708_111940'
+
+2020-10-12 14:37:49[WARN] user: joe
+GET /groups/8
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/show.html.erb:12:in `block in _app_views_groups_show_html_erb__556344755760158708_111940'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/groups/show.html.erb:10:in `_app_views_groups_show_html_erb__556344755760158708_111940'
+
+2020-10-12 16:41:43[WARN] user: joe
+GET /transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:9:in `block in _app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:7:in `_app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/index.html.erb:7:in `_app_views_transactions_index_html_erb___3891570264660752186_168060'
+
+2020-10-12 16:42:06[WARN] user: joe
+GET /transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:9:in `block in _app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:7:in `_app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/index.html.erb:7:in `_app_views_transactions_index_html_erb___3891570264660752186_168060'
+
+2020-10-12 16:42:18[WARN] user: joe
+GET /transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:9:in `block in _app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:7:in `_app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/index.html.erb:7:in `_app_views_transactions_index_html_erb___3891570264660752186_168060'
+
+2020-10-12 16:43:08[WARN] user: joe
+GET /transactions
+USE eager loading detected
+  Group => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:12:in `block in _app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:7:in `_app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/index.html.erb:7:in `_app_views_transactions_index_html_erb___3891570264660752186_168060'
+
+2020-10-12 16:43:31[WARN] user: joe
+GET /transactions
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:12:in `block in _app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:7:in `_app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/index.html.erb:7:in `_app_views_transactions_index_html_erb___3891570264660752186_168060'
+

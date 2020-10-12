@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
   def index
     redirect_to root_path if session[:user_id].nil?
-    @transactions = Transaction.where(user_id: session[:user_id])
+    @transactions = Transaction.where(user_id: session[:user_id]).includes(groups: [avatar_attachment: :blob])
     @total_transactions_value = @transactions.sum('amount')
   end
 

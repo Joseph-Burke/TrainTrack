@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     redirect_to root_path if session[:user_id].nil?
-    @users = User.all
+    @users = User.all.includes(avatar_attachment: [:blob])
   end
 
   def new
