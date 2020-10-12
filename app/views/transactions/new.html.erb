@@ -2,6 +2,7 @@
 <div class="transactions-new">
   <div class="banner">
     <h1>New Transaction</h1>
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
   </div>  
 
 

@@ -21736,3 +21736,1803 @@ Processing by TransactionsController#show as HTML
 Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 6421)
 
 
+  [1m[36mUser Load (55.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2020-10-12 13:03:20 +0100
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 316ms (Views: 310.9ms | ActiveRecord: 0.0ms | Allocations: 42207)
+
+
+Started POST "/login" for ::1 at 2020-10-12 13:03:34 +0100
+Processing by SessionsController#create as JS
+  Parameters: {"authenticity_token"=>"BAUZnMqgTq3fApy68RiQ6BQLU+9Damk7YL5+kZ6ewe5ptflkylOfYn/ld92TL77qor88m3vIrUQAuB6lhrksMQ==", "name"=>"Joe", "commit"=>"Enter"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/11
+Completed 200 OK in 22ms (ActiveRecord: 8.7ms | Allocations: 5745)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:03:34 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (1.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 61.2ms | Allocations: 18462)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 61.8ms | ActiveRecord: 15.1ms | Allocations: 32815)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29/20200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:03:35 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29", "filename"=>"20200810_190639907_iOS"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[36m  Disk Storage (9.1ms) [0m[34mGenerated URL for file at key: d7ylyo6jlubugc3yj4kssg6xut5p (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjowODozNS4xNTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--0a2c6d351309f59efc7a2e7512b754c27e770ea1/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjowODozNS4xNTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--0a2c6d351309f59efc7a2e7512b754c27e770ea1/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms | Allocations: 3200)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjowODozNS4xNTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--0a2c6d351309f59efc7a2e7512b754c27e770ea1/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:03:35 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjowODozNS4xNTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--0a2c6d351309f59efc7a2e7512b754c27e770ea1", "filename"=>"20200810_190639907_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 432)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:03:47 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 2.8ms | Allocations: 910)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1300)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.6ms | Allocations: 7380)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:06:17 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  [1m[36mGroup Load (5.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_transactions" ON "groups"."id" = "group_transactions"."group_id" WHERE "group_transactions"."transaction_id" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["transaction_id", 47], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  Rendered transactions/_transaction_list.html.erb (Duration: 35.3ms | Allocations: 14499)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 36.0ms | Allocations: 14866)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 35.7ms | ActiveRecord: 9.7ms | Allocations: 21238)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1978236269b4d5576666f12876baaeed0df6c881/20200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:06:17 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1978236269b4d5576666f12876baaeed0df6c881", "filename"=>"20200810_190457900_iOS"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: iac068c4cjdiyuqk60mzrn3zz8i1 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1830)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:06:17 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96", "filename"=>"20200810_190457900_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 391)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:10:58 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_transactions" ON "groups"."id" = "group_transactions"."group_id" WHERE "group_transactions"."transaction_id" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["transaction_id", 47], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  Rendered transactions/_transaction_list.html.erb (Duration: 7.8ms | Allocations: 4102)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4465)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 1.8ms | Allocations: 10907)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:10:58 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96", "filename"=>"20200810_190457900_iOS"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:11:00 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_transactions" ON "groups"."id" = "group_transactions"."group_id" WHERE "group_transactions"."transaction_id" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["transaction_id", 47], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  Rendered transactions/_transaction_list.html.erb (Duration: 8.0ms | Allocations: 3887)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 1.9ms | Allocations: 9522)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:11:00 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxMToxNy4zMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--e5f74e81d39f6e1a0bfd692f5a0524ada4db7d96", "filename"=>"20200810_190457900_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 376)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:11:07 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_transactions" ON "groups"."id" = "group_transactions"."group_id" WHERE "group_transactions"."transaction_id" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["transaction_id", 47], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  Rendered transactions/_transaction_list.html.erb (Duration: 6.8ms | Allocations: 3881)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3994)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 1.2ms | Allocations: 9547)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1978236269b4d5576666f12876baaeed0df6c881/20200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:11:07 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1978236269b4d5576666f12876baaeed0df6c881", "filename"=>"20200810_190457900_iOS"}
+  [1m[36mActiveStorage::Blob Load (9.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: iac068c4cjdiyuqk60mzrn3zz8i1 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxNjowNy42MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1018469b49acb190e922ba1abeac721aebc1d15d/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxNjowNy42MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1018469b49acb190e922ba1abeac721aebc1d15d/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg
+Completed 302 Found in 21ms (ActiveRecord: 10.0ms | Allocations: 1955)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxNjowNy42MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1018469b49acb190e922ba1abeac721aebc1d15d/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:11:07 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxNjowNy42MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1018469b49acb190e922ba1abeac721aebc1d15d", "filename"=>"20200810_190457900_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:11:08 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_transactions" ON "groups"."id" = "group_transactions"."group_id" WHERE "group_transactions"."transaction_id" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["transaction_id", 47], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:11
+  Rendered transactions/_transaction_list.html.erb (Duration: 9.2ms | Allocations: 3908)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 2.9ms | Allocations: 9590)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxNjowNy42MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1018469b49acb190e922ba1abeac721aebc1d15d/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:11:08 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoxNjowNy42MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1018469b49acb190e922ba1abeac721aebc1d15d", "filename"=>"20200810_190457900_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 376)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:11:16 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (1.1ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL AND "group_transactions"."transaction_id" = $1[0m  [["transaction_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 11.8ms | Allocations: 4736)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 14.2ms | Allocations: 5636)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.4ms | Allocations: 10621)
+
+
+  
+ActionView::Template::Error (undefined method `groups' for nil:NilClass):
+     8:     <div class="card">
+     9:       <img 
+    10:         class="image" 
+    11:         src= <%= "#{url_for(transaction.groups.first.avatar)}" %>
+    12:         >
+    13:       <div class="card-body">
+    14:         <div class="details">
+  
+app/views/transactions/_transaction_list.html.erb:11
+app/views/transactions/_transaction_list.html.erb:7:in `each'
+app/views/transactions/_transaction_list.html.erb:7
+app/views/transactions/external_transactions.html.erb:6
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:13:11 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL AND "group_transactions"."transaction_id" = $1[0m  [["transaction_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 1.3ms | Allocations: 1771)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2794)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.3ms | Allocations: 5385)
+
+
+  
+ActionView::Template::Error (undefined method `groups' for nil:NilClass):
+     9:       <div class="card">
+    10:         <img 
+    11:           class="image" 
+    12:           src= <%= "#{url_for(transaction.groups.first.avatar)}" %>
+    13:           >
+    14:         <div class="card-body">
+    15:           <div class="details">
+  
+app/views/transactions/_transaction_list.html.erb:12
+app/views/transactions/_transaction_list.html.erb:8:in `each'
+app/views/transactions/_transaction_list.html.erb:8
+app/views/transactions/external_transactions.html.erb:6
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:13:14 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL AND "group_transactions"."transaction_id" = $1[0m  [["transaction_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 1.2ms | Allocations: 1527)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2304)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms | Allocations: 4162)
+
+
+  
+ActionView::Template::Error (undefined method `groups' for nil:NilClass):
+     9:       <div class="card">
+    10:         <img 
+    11:           class="image" 
+    12:           src= <%= "#{url_for(transaction.groups.first.avatar)}" %>
+    13:           >
+    14:         <div class="card-body">
+    15:           <div class="details">
+  
+app/views/transactions/_transaction_list.html.erb:12
+app/views/transactions/_transaction_list.html.erb:8:in `each'
+app/views/transactions/_transaction_list.html.erb:8
+app/views/transactions/external_transactions.html.erb:6
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:13:38 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL AND "group_transactions"."transaction_id" = $1[0m  [["transaction_id", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.7ms | Allocations: 243)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1263)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.8ms | Allocations: 8440)
+
+
+  [1m[36mGroupTransaction Load (0.4ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL AND "group_transactions"."transaction_id" = $1[0m  [["transaction_id", 1]]
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL AND "group_transactions"."transaction_id" = $1 LIMIT $2[0m  [["transaction_id", 1], ["LIMIT", 11]]
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:16:46 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 7.5ms | Allocations: 8067)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/transactions_controller.rb:32:in `block in external_transactions'
+app/controllers/transactions_controller.rb:32:in `filter'
+app/controllers/transactions_controller.rb:32:in `external_transactions'
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:17:39 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (1.0ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 12.1ms | Allocations: 4104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 16.5ms | ActiveRecord: 9.7ms | Allocations: 15949)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:17:40 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.5ms | Allocations: 775)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.0ms | Allocations: 7025)
+
+
+Started POST "/users/11" for ::1 at 2020-10-12 13:18:59 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/11"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/11" for ::1 at 2020-10-12 13:19:07 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/11"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/11" for ::1 at 2020-10-12 13:19:35 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/11"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/11" for ::1 at 2020-10-12 13:20:42 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/11"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:20:47 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 1.2ms | Allocations: 243)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.7ms | Allocations: 8340)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:20:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 30.6ms | Allocations: 14172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 32.3ms | ActiveRecord: 5.7ms | Allocations: 26294)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29/20200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:20:49 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29", "filename"=>"20200810_190639907_iOS"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: d7ylyo6jlubugc3yj4kssg6xut5p (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoyNTo0OS42OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--f270bb2cb5493f4323eb08335365885f3e724d55/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoyNTo0OS42OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--f270bb2cb5493f4323eb08335365885f3e724d55/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 2165)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoyNTo0OS42OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--f270bb2cb5493f4323eb08335365885f3e724d55/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:20:49 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjoyNTo0OS42OTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--f270bb2cb5493f4323eb08335365885f3e724d55", "filename"=>"20200810_190639907_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 439)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:30:34 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Exists? (6.3ms)[0m  [1m[34mSELECT 1 AS one FROM "transactions" WHERE "transactions"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 8.5ms | Allocations: 720)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 962)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 6.9ms | Allocations: 6694)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:31:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2398)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 17.0ms | ActiveRecord: 3.5ms | Allocations: 10123)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29/20200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:31:50 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29", "filename"=>"20200810_190639907_iOS"}
+  [1m[36mActiveStorage::Blob Load (23.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: d7ylyo6jlubugc3yj4kssg6xut5p (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg
+Completed 302 Found in 33ms (ActiveRecord: 23.7ms | Allocations: 1821)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:31:50 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c", "filename"=>"20200810_190639907_iOS"}
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 387)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:32:12 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 134.8ms | ActiveRecord: 1.0ms | Allocations: 36513)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:32:12 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 381)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:32:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 16.0ms | ActiveRecord: 2.6ms | Allocations: 9093)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:32:15 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 380)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:32:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 82.6ms | ActiveRecord: 2.1ms | Allocations: 31897)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:32:41 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjozNjo1MC41NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--816812faac71aa4facdb76d8df37267534994e9c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 382)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:32:50 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (3.4ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 1.0ms | Allocations: 243)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 16.2ms | ActiveRecord: 4.2ms | Allocations: 8017)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:33:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (22.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 32.4ms | ActiveRecord: 27.7ms | Allocations: 8945)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:33:23 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Exists? (5.9ms)[0m  [1m[34mSELECT 1 AS one FROM "transactions" WHERE "transactions"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 7.6ms | Allocations: 668)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 11.3ms | ActiveRecord: 6.2ms | Allocations: 6581)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:34:04 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Exists? (14.5ms)[0m  [1m[34mSELECT 1 AS one FROM "transactions" WHERE "transactions"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 15.6ms | Allocations: 666)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 10.2ms | ActiveRecord: 17.2ms | Allocations: 6314)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:35:12 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (5.0ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.0ms | Allocations: 689)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 5.6ms | Allocations: 6933)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:35:14 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (21.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (5.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 10.8ms | ActiveRecord: 27.1ms | Allocations: 8924)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:36:25 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "transactions" WHERE "transactions"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 2.9ms | Allocations: 666)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 15.0ms | ActiveRecord: 11.0ms | Allocations: 6309)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:36:28 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.7ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 5.4ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 4.8ms | Allocations: 6925)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:37:51 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (9.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.8ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 88.5ms | ActiveRecord: 10.0ms | Allocations: 34327)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:37:51 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (13.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.4ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 32.8ms | ActiveRecord: 14.1ms | Allocations: 6925)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:37:53 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.5ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 1.8ms | Allocations: 6936)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:37:53 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.9ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 1.9ms | Allocations: 6937)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:38:38 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.7ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.5ms | Allocations: 243)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 1.1ms | Allocations: 8348)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:38:39 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.7ms | Allocations: 700)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.7ms | Allocations: 6950)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:38:40 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.0ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.9ms | Allocations: 6949)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:38:40 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.9ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 1.1ms | Allocations: 6953)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:39:51 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.8ms | Allocations: 243)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 0.6ms | Allocations: 8312)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:40:07 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.8ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.4ms | Allocations: 700)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 153ms (Views: 148.0ms | ActiveRecord: 1.1ms | Allocations: 33985)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:40:30 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.0ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 105.7ms | ActiveRecord: 0.7ms | Allocations: 33636)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:40:31 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.5ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.6ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.4ms | ActiveRecord: 1.6ms | Allocations: 6943)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:40:40 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.4ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 95.1ms | ActiveRecord: 0.7ms | Allocations: 34016)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:40:42 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.4ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.7ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 6938)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:40:54 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.5ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.0ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 85.4ms | ActiveRecord: 1.0ms | Allocations: 34087)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:41:00 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.0ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 93.0ms | ActiveRecord: 0.4ms | Allocations: 34478)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:41:05 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.4ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.8ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 132.7ms | ActiveRecord: 1.0ms | Allocations: 34496)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:41:39 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.6ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 81.2ms | ActiveRecord: 0.7ms | Allocations: 33627)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:41:57 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.9ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 83.4ms | ActiveRecord: 0.6ms | Allocations: 33570)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:42:35 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.7ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 81.3ms | ActiveRecord: 0.7ms | Allocations: 34068)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:42:42 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.3ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 86.8ms | ActiveRecord: 0.9ms | Allocations: 34057)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:43:02 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (1.1ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.6ms | Allocations: 695)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.4ms | Allocations: 10334)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "...: rgba(200, 200": expected expression (e.g. 1px, bold), was ". 200, 0.8)"
+        on line 77:30 of app/assets/stylesheets/_mixins.scss
+>>     background: rgba(200, 200. 200, 0.8)
+
+   -----------------------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/_mixins.scss:77
+app/views/layouts/application.html.erb:8
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:43:09 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.6ms | Allocations: 695)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.7ms | Allocations: 9897)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "...: rgba(200, 200": expected expression (e.g. 1px, bold), was ". 200, 0.8);"
+        on line 77:30 of app/assets/stylesheets/_mixins.scss
+>>     background: rgba(200, 200. 200, 0.8);
+
+   -----------------------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/_mixins.scss:77
+app/views/layouts/application.html.erb:8
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:43:24 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (2.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 15.9ms | Allocations: 695)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 15.4ms | Allocations: 10334)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "...: rgba(200, 200": expected expression (e.g. 1px, bold), was ". 200, 0.8);"
+        on line 77:36 of app/assets/stylesheets/_mixins.scss
+>>     background-color: rgba(200, 200. 200, 0.8);
+
+   -----------------------------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/_mixins.scss:77
+app/views/layouts/application.html.erb:8
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:43:34 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (1.8ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 3.0ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 109.1ms | ActiveRecord: 3.7ms | Allocations: 34509)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:43:40 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (2.0ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.4ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 95.3ms | ActiveRecord: 2.4ms | Allocations: 34502)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:43:58 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.3ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 96.9ms | ActiveRecord: 0.7ms | Allocations: 34072)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:44:01 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.0ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.6ms | Allocations: 6945)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:44:02 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 2.6ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 27.6ms | ActiveRecord: 2.2ms | Allocations: 6935)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:44:52 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.3ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 91.8ms | ActiveRecord: 0.6ms | Allocations: 34496)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:46:18 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.5ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.6ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 168ms (Views: 162.6ms | ActiveRecord: 0.9ms | Allocations: 34040)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:46:21 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.2ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.8ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 1.0ms | Allocations: 6939)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:46:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (3.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 14.8ms | Allocations: 2379)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 24.7ms | ActiveRecord: 8.2ms | Allocations: 9669)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29/20200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:46:32 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--66ffbb7c21323c069fa7b08a0bc9c5c132390c29", "filename"=>"20200810_190639907_iOS"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: d7ylyo6jlubugc3yj4kssg6xut5p (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms | Allocations: 1817)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:46:32 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c", "filename"=>"20200810_190639907_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 407)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:46:47 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 1.8ms | Allocations: 700)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 141.3ms | ActiveRecord: 0.6ms | Allocations: 34511)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:47:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (12.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 10.1ms | ActiveRecord: 13.9ms | Allocations: 8907)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:47:06 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:47:08 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.3ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (11.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 7.6ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 8.1ms | ActiveRecord: 17.8ms | Allocations: 6942)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:47:10 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "transactions" WHERE "transactions"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 1.2ms | Allocations: 666)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 909)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 6567)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:47:39 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/index.html.erb:4
+  [1m[36mTransaction Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "transactions" WHERE "transactions"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 2.5ms | Allocations: 903)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.7ms | Allocations: 8364)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:47:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 40.2ms | Allocations: 2373)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 48.6ms | ActiveRecord: 7.5ms | Allocations: 9657)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:47:41 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 374)
+
+
+Started GET "/groups" for ::1 at 2020-10-12 13:47:42 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:12
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:12
+  Rendered groups/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 7885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 29.9ms | ActiveRecord: 7.8ms | Allocations: 13246)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fbee221669afb3e5690b905f72e5f44e82a8d007/20200810_190643009_iOS.jpg" for ::1 at 2020-10-12 13:47:42 +0100
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1978236269b4d5576666f12876baaeed0df6c881/20200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:47:42 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fbee221669afb3e5690b905f72e5f44e82a8d007", "filename"=>"20200810_190643009_iOS"}
+  [1m[36mActiveStorage::Blob Load (10.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: u96v29l141ltv9zjj1glsk2qjyjj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad/20200810_190643009_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190643009_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190643009_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad/20200810_190643009_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190643009_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190643009_iOS.jpg
+Completed 302 Found in 55ms (ActiveRecord: 10.3ms | Allocations: 4252)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad/20200810_190643009_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190643009_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190643009_iOS.jpg" for ::1 at 2020-10-12 13:47:42 +0100
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1978236269b4d5576666f12876baaeed0df6c881", "filename"=>"20200810_190457900_iOS"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190643009_iOS.jpg\"; filename*=UTF-8''20200810_190643009_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad", "filename"=>"20200810_190643009_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 403)
+
+
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: iac068c4cjdiyuqk60mzrn3zz8i1 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms | Allocations: 3445)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:47:42 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3", "filename"=>"20200810_190457900_iOS"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 395)
+
+
+Started GET "/groups" for ::1 at 2020-10-12 13:47:57 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:4
+  [1m[36mGroup Load (3.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mActiveStorage::Blob Load (21.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (Duration: 67.9ms | Allocations: 5844)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 51.0ms | ActiveRecord: 27.3ms | Allocations: 11623)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:47:57 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad/20200810_190643009_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190643009_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190643009_iOS.jpg" for ::1 at 2020-10-12 13:47:57 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3", "filename"=>"20200810_190457900_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190643009_iOS.jpg\"; filename*=UTF-8''20200810_190643009_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad", "filename"=>"20200810_190643009_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-12 13:48:03 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 5885)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-12 13:48:13 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/groups/new.html.erb:4
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 7006)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:48:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2373)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 20.7ms | ActiveRecord: 9.4ms | Allocations: 9657)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:48:16 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 374)
+
+
+Started GET "/users/11/edit" for ::1 at 2020-10-12 13:48:22 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.0ms | Allocations: 652)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 944)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 23.5ms | ActiveRecord: 4.1ms | Allocations: 6521)
+
+
+Started GET "/users/11/edit" for ::1 at 2020-10-12 13:48:34 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/edit.html.erb:4
+  Rendered users/_form.html.erb (Duration: 2.2ms | Allocations: 588)
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1538)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 31.2ms | ActiveRecord: 3.2ms | Allocations: 7870)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:48:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (18.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 32.3ms | Allocations: 2374)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 23.5ms | ActiveRecord: 21.4ms | Allocations: 9228)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:48:37 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Started GET "/groups" for ::1 at 2020-10-12 13:48:39 +0100
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:4
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Group"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (Duration: 31.8ms | Allocations: 5816)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 32.0ms | ActiveRecord: 16.4ms | Allocations: 11276)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3/20200810_190457900_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190457900_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190457900_iOS.jpg" for ::1 at 2020-10-12 13:48:39 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad/20200810_190643009_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190643009_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190643009_iOS.jpg" for ::1 at 2020-10-12 13:48:39 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190457900_iOS.jpg\"; filename*=UTF-8''20200810_190457900_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV0ZqTURZNFl6UmphbVJwZVhWeGF6WXdiWHB5YmpONmVqaHBNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EUTFOemt3TUY5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTBOVGM1TURCZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi45NThaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ea1144b9204ef4648191e3986d0d56adb514ac3", "filename"=>"20200810_190457900_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 388)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190643009_iOS.jpg\"; filename*=UTF-8''20200810_190643009_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkVGsyZGpJNWJERTBNV3gwZGpsNmFtb3haMnh6YXpKeGFubHFhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWTBNekF3T1Y5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJORE13TURsZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1Mjo0Mi44NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--1ac28c7265fe6e980bdb5b3dc81e66820d3f9fad", "filename"=>"20200810_190643009_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Started GET "/groups/new" for ::1 at 2020-10-12 13:48:41 +0100
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/groups/new.html.erb:4
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 6247)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:48:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (3.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 138.2ms | Allocations: 2205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 171ms (Views: 141.5ms | ActiveRecord: 20.6ms | Allocations: 8953)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:48:43 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 394)
+
+
+Started GET "/external_transactions" for ::1 at 2020-10-12 13:48:44 +0100
+Processing by TransactionsController#external_transactions as HTML
+  [1m[36mGroupTransaction Load (0.7ms)[0m  [1m[34mSELECT "group_transactions".* FROM "group_transactions" WHERE "group_transactions"."group_id" IS NULL[0m
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  [1m[36mTransaction Load (2.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:32:in `map'
+  Rendering transactions/external_transactions.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/external_transactions.html.erb:3
+  Rendered transactions/_transaction_list.html.erb (Duration: 1.1ms | Allocations: 243)
+  Rendered transactions/external_transactions.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 21.8ms | ActiveRecord: 3.3ms | Allocations: 8026)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:48:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (2.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 13.9ms | ActiveRecord: 8.8ms | Allocations: 8919)
+
+
+Started GET "/transactions" for ::1 at 2020-10-12 13:48:48 +0100
+Processing by TransactionsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/transactions_controller.rb:5:in `index'
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/index.html.erb:4
+  [1m[36mTransaction Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "transactions" WHERE "transactions"."user_id" = $1 LIMIT $2[0m  [["user_id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/_transaction_list.html.erb:7
+  Rendered transactions/_transaction_list.html.erb (Duration: 1.3ms | Allocations: 667)
+  Rendered transactions/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1548)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 16.3ms | ActiveRecord: 4.4ms | Allocations: 7212)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-12 13:48:52 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:14
+  Rendered transactions/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 7391)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 1.2ms | Allocations: 13853)
+
+
+Started GET "/transactions/new" for ::1 at 2020-10-12 13:49:07 +0100
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10:in `new'
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/transactions/new.html.erb:5
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/new.html.erb:15
+  Rendered transactions/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2531)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.9ms | Allocations: 9087)
+
+
+Started GET "/users/11" for ::1 at 2020-10-12 13:49:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2374)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 26.6ms | ActiveRecord: 5.3ms | Allocations: 9660)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c/20200810_190639907_iOS.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2220200810_190639907_iOS.jpg%22%3B+filename%2A%3DUTF-8%27%2720200810_190639907_iOS.jpg" for ::1 at 2020-10-12 13:49:10 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"20200810_190639907_iOS.jpg\"; filename*=UTF-8''20200810_190639907_iOS.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRGQ1Ykhsdk5tcHNkV0oxWjJNemVXbzBhM056WnpaNGRYUTFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJd01qQXdPREV3WHpFNU1EWXpPVGt3TjE5cFQxTXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljeU1ESXdNRGd4TUY4eE9UQTJNems1TURkZmFVOVRMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMC0xMlQxMjo1MTozMi4wODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--aae25b67ff98006eb6b8706391b7ae7103b2d18c", "filename"=>"20200810_190639907_iOS"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 384)
+
+

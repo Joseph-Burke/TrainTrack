@@ -29,7 +29,7 @@ class TransactionsController < ApplicationController
   end
 
   def external_transactions
-    @transactions = GroupTransaction.where(group_id: nil, transaction_id: 1).map(&:owner)
+    @transactions = GroupTransaction.where(group_id: nil).map(&:owner).select { |trans| !trans.nil? && trans.user_id == session[:user_id] }
   end
 
   private

@@ -4,18 +4,23 @@
 </div>
 
 <ul class="transactions-list">
-  <% @transactions.each do |transaction| %>
-    <div class="card">
-      <div class="image"></div>
-      <div class="card-body">
-        <div class="details">
-          <h5><%= transaction.name %></h5>
-          <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
-        </div>
-        <div class="transaction-amount">
-          <%= "#{transaction.amount} hours" %>
+  <% if @transactions.empty? %>
+    <% @transactions.each do |transaction| %>
+      <div class="card">
+        <img 
+          class="image" 
+          src= <%= "#{url_for(transaction.groups.first.avatar)}" %>
+          >
+        <div class="card-body">
+          <div class="details">
+            <h5><%= transaction.name %></h5>
+            <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
+          </div>
+          <div class="transaction-amount">
+            <%= "#{transaction.amount} hours" %>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </ul>

@@ -1,6 +1,7 @@
 <div class="groups-index">
   <div class="banner">
     <h1>Groups</h1>
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
   </div>
 
   <ul class="groups-list">
