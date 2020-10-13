@@ -2,7 +2,7 @@
 
 > TrainTrack is a time-tracking mobile web application for recording time spent training or caring for a pet.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./public/product_mockup.jpg)
 
 > Using TrainTrack, you and your friends or family can see the amount of time you've devoted to caring for a pet animal. This application is designed for mobile use and is based on a [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) by [Gregoire Vella](https://www.behance.net/gregoirevella).
 
@@ -16,12 +16,12 @@
 
 ## Live Demo
 
-[Live Demo Link](https://intense-beach-76998.herokuapp.com/)
+Check out the [Live Demo](https://intense-beach-76998.herokuapp.com/), deployed on Heroku.
 
 
 ## Getting Started
 
-While the Live Demo provides a demonstration of how the application functions, local installation is recommended for a more stable, long-term user experience
+While the Live Demo provides a demonstration of how the application functions, local installation is recommended for a more stable, long-term user experience. 
 
 ### Prerequisites
 
@@ -82,7 +82,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse
+- **[Gregoire Vella](https://www.behance.net/gregoirevella)** created the design this application was based on. Thanks!
+- This project was created as part of the Ruby on Rails module on **[Microverse](https://www.microverse.org/)**'s Web Development course.
+- Thanks to my Microverse team-mates **[Amita Roy](https://github.com/Amita-Roy)**, **[Oyeleke Ayomide](https://github.com/Haywhizzz)**, **[Robert Loterh](https://github.com/rloterh)**, **[Eyüp Sercan](https://github.com/eypsrcnuygr)** and my coding partner **[Maryjane Akpagbue](https://github.com/maryjanee)**, all fantastic and highly-recommended developers.
+- Special thanks to **[Brandon Defoe](https://github.com/defoebrand)** for personal and technical support throughout the completion of this project.
 
 ## 📝 License
 
