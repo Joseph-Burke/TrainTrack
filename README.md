@@ -1,4 +1,4 @@
-# Project Name
+# TrainTrack
 
 > TrainTrack is a time-tracking mobile web application for recording time spent training or caring for a pet.
 
