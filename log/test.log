@@ -116,3 +116,297 @@ FOREIGN KEY ("user_id")
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:03.497921"], ["updated_at", "2020-10-13 08:48:03.497921"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:03.552440"], ["updated_at", "2020-10-13 08:48:03.552440"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:03.565847"], ["updated_at", "2020-10-13 08:48:03.565847"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe Burke"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Taken Name"], ["created_at", "2020-10-13 08:48:03.575200"], ["updated_at", "2020-10-13 08:48:03.575200"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:21.902351"], ["updated_at", "2020-10-13 08:48:21.902351"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:21.944068"], ["updated_at", "2020-10-13 08:48:21.944068"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:21.953777"], ["updated_at", "2020-10-13 08:48:21.953777"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe Burke"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Taken Name"], ["created_at", "2020-10-13 08:48:21.965259"], ["updated_at", "2020-10-13 08:48:21.965259"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:47.450642"], ["updated_at", "2020-10-13 08:48:47.450642"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:47.492330"], ["updated_at", "2020-10-13 08:48:47.492330"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:47.501947"], ["updated_at", "2020-10-13 08:48:47.501947"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:48:47.507016"], ["updated_at", "2020-10-13 08:48:47.507016"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe Burke"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Taken Name"], ["created_at", "2020-10-13 08:48:47.515145"], ["updated_at", "2020-10-13 08:48:47.515145"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:54:25.244036"], ["updated_at", "2020-10-13 08:54:25.244036"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:54:25.302663"], ["updated_at", "2020-10-13 08:54:25.302663"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:54:25.315115"], ["updated_at", "2020-10-13 08:54:25.315115"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:54:25.321683"], ["updated_at", "2020-10-13 08:54:25.321683"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:54:25.326698"], ["updated_at", "2020-10-13 08:54:25.326698"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe Burke"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Taken Name"], ["created_at", "2020-10-13 08:54:25.337291"], ["updated_at", "2020-10-13 08:54:25.337291"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:56:28.465742"], ["updated_at", "2020-10-13 08:56:28.465742"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:56:28.518124"], ["updated_at", "2020-10-13 08:56:28.518124"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:56:28.530908"], ["updated_at", "2020-10-13 08:56:28.530908"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:56:28.535646"], ["updated_at", "2020-10-13 08:56:28.535646"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:56:28.539743"], ["updated_at", "2020-10-13 08:56:28.539743"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 08:56:28.544485"], ["updated_at", "2020-10-13 08:56:28.544485"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe Burke"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Taken Name"], ["created_at", "2020-10-13 08:56:28.554431"], ["updated_at", "2020-10-13 08:56:28.554431"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 09:12:22.240959"], ["updated_at", "2020-10-13 09:12:22.240959"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 09:12:22.300200"], ["updated_at", "2020-10-13 09:12:22.300200"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 09:12:22.311935"], ["updated_at", "2020-10-13 09:12:22.311935"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 09:12:22.316704"], ["updated_at", "2020-10-13 09:12:22.316704"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 09:12:22.320943"], ["updated_at", "2020-10-13 09:12:22.320943"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 09:12:22.327771"], ["updated_at", "2020-10-13 09:12:22.327771"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Joe"], ["created_at", "2020-10-13 09:12:22.330854"], ["updated_at", "2020-10-13 09:12:22.330854"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe Burke"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Taken Name"], ["created_at", "2020-10-13 09:12:22.340856"], ["updated_at", "2020-10-13 09:12:22.340856"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Taken Name"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
