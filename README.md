@@ -1,42 +1,63 @@
 # Project Name
 
-> TrainTrack is a time-tracking web application for recording time spent training or caring for a pet.
+> TrainTrack is a time-tracking mobile web application for recording time spent training or caring for a pet.
 
 ![screenshot](./app_screenshot.png)
 
-> Using TrainTrack, you and your friends or family can see the time you've devoted to caring for a pet animal.
+> Using TrainTrack, you and your friends or family can see the amount of time you've devoted to caring for a pet animal. This application is designed for mobile use and is based on a [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) by [Gregoire Vella](https://www.behance.net/gregoirevella).
 
 ## Built With
 
 - Ruby on Rails
 - Sass
-- 
+- RSpec, Rubocop, Stylelint
+- Google Chrome
+- MacOS Catalina
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://intense-beach-76998.herokuapp.com/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+While the Live Demo provides a demonstration of how the application functions, local installation is recommended for a more stable, long-term user experience
 
 ### Prerequisites
 
+The prerequisites for local installation include [Ruby on Rails](http://railsinstaller.org/en), [Ruby](https://www.ruby-lang.org/en/downloads/), PostgreSQL. 
+
+PostgreSQL, which handles TrainTrack's database, is listed with all the other prerequisite gems in the Gemfile. These may be installed en masse using [Bundler](https://bundler.io/).
+
 ### Setup
 
-### Install
+1. Open a Terminal and navigate to the location in your system where you would like to download the project. **New to Terminal? [Learn here](https://www.freecodecamp.org/news/conquering-the-command-line-f85f5e46c07c/).**
+
+2. Enter the following line of code to clone this repository:
+
+`git clone git@github.com:Joseph-Burke/TrainTrack.git`
+
+3. Enter the following line of code to move inside the downloaded repo:
+
+`cd TrainTrack`
+
+4. To install all of the project's gems, run the following:
+
+`bundle install`
+
+5. To set up the project's databases, run the following: 
+
+`rails db:setup ; rails db:migrate`
+
+**Congratulations!** TrainTrack is now ready to roll!
 
 ### Usage
 
+Accessing the application requires a running server. This can easily be achieved from the project's root directory by running `rails s`. The app will now be accessible at the following URL: `http://localhost:3000/`.
+
 ### Run tests
 
-### Deployment
-
+TrainTrack's tests are managed by the rspec-rails gem. Running tests is as easy as entering `rspec` in the project's root directory. For more information on rspec-rails, take a look at their [GitHub repo](https://github.com/rspec/rspec-rails).
 
 
 ## Author

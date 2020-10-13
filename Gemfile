@@ -57,5 +57,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # MANUALLY-ADDED GEMS
 # Rubocop
 gem 'date'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'rubocop', '~>0.81.0'
