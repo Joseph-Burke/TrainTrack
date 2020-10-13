@@ -17,7 +17,8 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params.except(:group_ids))
     @transaction.user_id = session[:user_id]
     @transaction.save
-    params[:transaction][:group_ids].select{ |n| !n.to_i.zero?}.each do |id| 
+    GroupTransaction.create(transaction_id: @transaction.id) if params[:transaction][:group_ids].all?("0")
+    params[:transaction][:group_ids].select{ |n| !n.to_i.zero? }.each do |id| 
       GroupTransaction.create(group_id: id.to_i, transaction_id: @transaction.id )
     end
     redirect_to transaction_path(@transaction)
@@ -29,7 +30,9 @@ class TransactionsController < ApplicationController
   end
 
   def external_transactions
-    @transactions = GroupTransaction.where(group_id: nil).map(&:owner).select { |trans| !trans.nil? && trans.user_id == session[:user_id] }
+    @transactions = Transaction.select do |trans|
+      trans.groups.empty? && trans.user.id == session[:user_id]
+    end
   end
 
   private
