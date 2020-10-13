@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-   def create
+  def create
     group = Group.create!(group_params)
     group.avatar.attach(params[:group][:avatar])
     redirect_to group_path(group)

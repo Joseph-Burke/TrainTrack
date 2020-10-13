@@ -5,23 +5,22 @@ RSpec.describe Group, type: :model do
     subject do
       described_class.new(
         name: 'Exercise'
-        )
+      )
     end
 
-    it 'is valid with requirements' do 
+    it 'is valid with requirements' do
       expect(subject).to be_valid
     end
 
-    it 'is invalid without a name present' do 
+    it 'is invalid without a name present' do
       subject.name = nil
       expect(subject).not_to be_valid
     end
 
-    it 'is invalid with a non-unique name' do 
-      Group.create(name: "A Taken Group Name")
+    it 'is invalid with a non-unique name' do
+      Group.create(name: 'A Taken Group Name')
       subject.name = Group.last.name
       expect(subject).not_to be_valid
     end
-
   end
 end

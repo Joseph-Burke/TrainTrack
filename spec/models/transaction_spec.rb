@@ -4,15 +4,11 @@ RSpec.describe Transaction, type: :model do
   let(:user) { User.create(name: 'Joe') }
   context 'validation' do
     subject do
-      described_class.new(
-        user_id: user.id,
-        name: 'Walk the dog',
-        amount: 0.5,
-        description: "Take the dog for a stroll around the neighbourhood"
-      )
+      described_class.new(user_id: user.id, name: 'Walk the dog', amount: 0.5,
+                          description: 'Take the dog for a stroll around the neighbourhood')
     end
 
-    it 'is valid with requirements' do 
+    it 'is valid with requirements' do
       expect(subject).to be_valid
     end
 
@@ -38,16 +34,9 @@ RSpec.describe Transaction, type: :model do
       expect(subject).not_to be_valid
     end
 
-    it 'is invalid without a user_id' do
-      subject.user_id = nil
-      expect(subject).not_to be_valid
-    end
-
     it 'is invalid with a description over 140 characters long' do
-      subject.description = " " * 141
+      subject.description = ' ' * 141
       expect(subject).not_to be_valid
     end
-
   end
-
 end
