@@ -2,19 +2,20 @@
 <div class="transactions-new">
   <div class="banner">
     <h1>New Transaction</h1>
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
   </div>  
 
 
   <%= form_with(model: @transaction) do |form| %>
 
     <div class="field-wrapper">
-      <%= form.label :group_id, "Group:" %>
+      <%= form.label :group_ids, "Group:" %>
 
       <div class="input">
         <% @groups.each do |group| %>
           <div>
-            <%= form.label :group_id, group.name %>
-            <%= form.radio_button(:group_id, group.id) %>
+            <%= form.label :group_ids, group.name %>
+            <%= form.check_box(:group_ids, {multiple: true}, group.id) %>
           </div>
         <% end %>
       </div>
@@ -30,6 +31,11 @@
       <%= form.label :amount, "Amount:" %>
       <%= form.text_field :amount %></br>
     </div>
+    <div class="field-wrapper">
+      <%= form.label :description, "Description:" %>
+      <%= form.text_area :description %></br>
+    </div>
+
 
     <%= form.submit "Submit" %>
   <% end %>

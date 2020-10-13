@@ -41,6 +41,7 @@
 .transaction-show {
   background: #f0f2f1;
   padding: 1rem;
+  font-size: 30px;
 
   .transaction-card {
     background: white;
@@ -54,19 +55,18 @@
         .image {
           width: 110px;
           height: 110px;
-          background: red;
         }
 
         .title {
           margin: 0 1rem;
-          font-size: 2.4rem;
+          font-size: 2em;
           font-weight: 100;
         }
       }
 
       .description {
         padding: 1rem 0;
-        font-size: 0.65rem;
+        font-size: 35px;
         color: #666;
       }
     }
@@ -78,7 +78,7 @@
       padding: 1rem 0;
 
       .date {
-        font-size: 0.65rem;
+        font-size: 30px;
         color: #666;
       }
     }

@@ -6,7 +6,12 @@
 <ul class="transactions-list">
   <% @transactions.each do |transaction| %>
     <div class="card">
-      <div class="image"></div>
+    <% unless transaction.groups.empty? %>
+      <img 
+        class="image" 
+        src= <%= "#{url_for(transaction.groups.first.avatar)}" %>
+        >
+    <% end %>
       <div class="card-body">
         <div class="details">
           <h5><%= transaction.name %></h5>
@@ -14,6 +19,18 @@
         </div>
         <div class="transaction-amount">
           <%= "#{transaction.amount} hours" %>
+          <%= button_to "Repeat Transaction",
+          {:controller => "transactions",
+          :action => "create",
+          :transaction=> {
+            name: transaction.name,
+            amount: transaction.amount,
+            description: transaction.description,
+            group_ids: transaction.groups.ids
+          }},
+          {:method=>:post}  
+          %>
+
         </div>
       </div>
     </div>
