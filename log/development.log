@@ -31676,3 +31676,21 @@ Creating scope :with_attached_avatar. Overwriting existing method Group.with_att
   [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
 Creating scope :with_attached_avatar. Overwriting existing method Group.with_attached_avatar.
   [1m[36mGroup Load (45.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "group_transactions" ON "groups"."id" = "group_transactions"."group_id" WHERE "group_transactions"."transaction_id" = $1 LIMIT $2[0m  [["transaction_id", 13], ["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-10-13 11:57:59 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 453ms (Views: 446.7ms | ActiveRecord: 0.0ms | Allocations: 74302)
+
+
+Started GET "/users/new" for ::1 at 2020-10-13 11:58:02 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.5ms | Allocations: 941)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1243)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 11.9ms | ActiveRecord: 4.6ms | Allocations: 11021)
+
+
