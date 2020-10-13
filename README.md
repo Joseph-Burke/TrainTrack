@@ -18,6 +18,10 @@
 
 Check out the [Live Demo](https://intense-beach-76998.herokuapp.com/), deployed on Heroku.
 
+## Video Introduction
+
+For a quick introduction to the project, take a look at [this video](https://www.loom.com/share/8f0b7b74b00046f0ab091d769edd68f9) on Loom.
+
 
 ## Getting Started
 
