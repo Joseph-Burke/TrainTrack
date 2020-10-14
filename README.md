@@ -47,7 +47,7 @@ PostgreSQL, which handles TrainTrack's database, is listed with all the other pr
 
 5. To set up the project's databases, run the following: 
 
-`rails db:setup ; rails db:migrate`
+`rails db:setup ; rails db:create ; rails db:migrate`
 
 **Congratulations!** TrainTrack is now ready to roll!
 
