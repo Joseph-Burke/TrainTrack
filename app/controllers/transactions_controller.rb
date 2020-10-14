@@ -2,7 +2,9 @@ class TransactionsController < ApplicationController
   def index
     redirect_to root_path if session[:user_id].nil?
     @transactions = Transaction.where(user_id: session[:user_id]).includes(groups: [avatar_attachment: :blob])
-    @total_transactions_value = @transactions.sum('amount')
+    @transactions = @transactions.filter { |trans| !trans.groups.empty? }
+    @total_transactions_value = 0
+    @transactions.each { |trans| @total_transactions_value += trans.amount }
   end
 
   def new
@@ -33,6 +35,8 @@ class TransactionsController < ApplicationController
     @transactions = Transaction.select do |trans|
       trans.groups.empty? && trans.user.id == session[:user_id]
     end
+    @total_transactions_value = 0
+    @transactions.each { |trans| @total_transactions_value += trans.amount }
   end
 
   private
