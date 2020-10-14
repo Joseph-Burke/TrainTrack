@@ -32,7 +32,7 @@ class TransactionsController < ApplicationController
   end
 
   def external_transactions
-    @transactions = Transaction.select do |trans|
+    @transactions = Transaction.includes([:groups, :user]).select do |trans|
       trans.groups.empty? && trans.user.id == session[:user_id]
     end
     @total_transactions_value = 0
