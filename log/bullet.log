@@ -156,3 +156,259 @@ Call stack
   /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/_transaction_list.html.erb:7:in `_app_views_transactions__transaction_list_html_erb__2442563451446935922_168080'
   /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/views/transactions/index.html.erb:7:in `_app_views_transactions_index_html_erb___3891570264660752186_168060'
 
+2020-10-14 11:04:44[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:04:44[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:08:11[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:08:11[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:12:23[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:13:13[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:13:40[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:13:40[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:15:31[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:15:57[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:17:18[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:17:18[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  Transaction => [:group_transactions]
+  Remove from your query: .includes([:group_transactions])
+Call stack
+
+2020-10-14 11:17:18[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:owner]
+  Remove from your query: .includes([:owner])
+Call stack
+
+2020-10-14 11:17:49[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:18:20[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:18:20[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:19:42[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:20:51[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:27:13[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:30:00[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:35:22[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:35:22[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:36:11[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:36:30[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:37:53[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:36:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:35:in `external_transactions'
+
+2020-10-14 11:37:53[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  Transaction => [:group_transactions]
+  Remove from your query: .includes([:group_transactions])
+Call stack
+
+2020-10-14 11:39:05[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:40:43[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:42:12[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:44:37[WARN] user: joe
+GET /external_transactions
+AVOID eager loading detected
+  GroupTransaction => [:group]
+  Remove from your query: .includes([:group])
+Call stack
+
+2020-10-14 11:45:01[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:38:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:37:in `external_transactions'
+
+2020-10-14 11:45:11[WARN] user: joe
+GET /external_transactions
+USE eager loading detected
+  Transaction => [:groups]
+  Add to your query: .includes([:groups])
+Call stack
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:38:in `block in external_transactions'
+  /Users/joe/Coding/Microverse/Ruby on Rails/Capstone Project/TrainTrack/app/controllers/transactions_controller.rb:37:in `external_transactions'
+
