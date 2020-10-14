@@ -9,10 +9,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create!(user_params)
-    session[:user_id] = user.id
-    user.avatar.attach(params[:user][:avatar])
-    redirect_to user_path(user)
+    @user = User.new(user_params.except(:avatar))
+    @user.valid?
+    if @user.save
+      session[:user_id] = @user.id
+      @user.avatar.attach(params[:user][:avatar])
+      redirect_to user_path(@user)
+    else
+      render :new if @user.errors.any?
+      # redirect_to root_path if @user.errors.any?
+    end
   end
 
   def show
