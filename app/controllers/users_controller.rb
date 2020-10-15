@@ -10,14 +10,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params.except(:avatar))
-    @user.valid?
     if @user.save
       session[:user_id] = @user.id
       @user.avatar.attach(params[:user][:avatar])
       redirect_to user_path(@user)
     else
-      render "users/new" if @user.errors.any?
-      # redirect_to root_path if @user.errors.any?
+      render :new
     end
   end
 

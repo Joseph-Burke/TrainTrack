@@ -76,7 +76,8 @@
     height: 200px;
   }
 
-  .profile-link {
+  .profile-link,
+  .login-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,9 +88,13 @@
     bottom: 10px;
     border: 1px solid white;
     max-width: 20%;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-decoration: none;
     background-color: rgba(200, 200, 200, 0.2);
+  }
+
+  .login-link {
+    padding: 1rem 2rem;
   }
 }
 
@@ -104,6 +109,10 @@
     flex: 1;
     border: none;
     box-shadow: 0 0 2px 1px black;
+  }
+
+  .check_box_option {
+    margin: 0.3rem 0;
   }
 
   label {

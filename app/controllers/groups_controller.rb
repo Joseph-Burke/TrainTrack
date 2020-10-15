@@ -10,9 +10,14 @@ class GroupsController < ApplicationController
   end
 
   def create
-    group = Group.create!(group_params)
-    group.avatar.attach(params[:group][:avatar])
-    redirect_to group_path(group)
+    @group = Group.new(group_params.except(:avatar))
+
+    if @group.save
+      @group.avatar.attach(params[:group][:avatar])
+      redirect_to group_path(@group)
+    else
+      render :new 
+    end
   end
 
   def show

@@ -6,14 +6,14 @@
   </div>  
 
 
-  <%= form_with(model: @transaction) do |form| %>
+  <%= form_with(model: @transaction, local: true) do |form| %>
 
     <div class="field-wrapper">
       <%= form.label :group_ids, "Group:" %>
 
       <div class="input">
         <% @groups.each do |group| %>
-          <div>
+          <div class='check_box_option'>
             <%= form.label :group_ids, group.name %>
             <%= form.check_box(:group_ids, {multiple: true}, group.id) %>
           </div>
@@ -38,6 +38,17 @@
 
 
     <%= form.submit "Submit" %>
+  <% end %>
+
+  <% if @transaction.errors.any?%>
+    <div class="errors">
+      <h3>Whoops! Group could not be created due to the following <%= pluralize(@transaction.errors.count, "reason") %>:</h3>
+      <ul>
+        <% @transaction.errors.full_messages.each do |msg| %>
+          <li><%= "#{msg}." %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
 
 </div>

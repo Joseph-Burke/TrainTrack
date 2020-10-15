@@ -10,16 +10,11 @@
   </div>
 
   <%= form.submit "Submit" %>
-
-
-
 <% end %>
-
-
 
 <% if @user.errors.any?%>
   <div class="errors">
-    <h3>Whoops! User could not be created due to the following <%= pluralize(@user.errors.count, "error") %>:</h3>
+    <h3>Whoops! User could not be created due to the following <% pluralize(@user.errors.count, "reason") %>:</h3>
     <ul>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= "#{msg}." %></li>
