@@ -69,3 +69,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+  html_tag.html_safe
+end
