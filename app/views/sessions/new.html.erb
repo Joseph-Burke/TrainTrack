@@ -4,7 +4,7 @@
   <a href="#"></a>
 </nav>
 
-<%= form_with(url: "/login", method: 'post') do %>
+<%= form_with(url: "/login", method: 'post', id: "login-form") do %>
   <%= text_field_tag :name, nil, placeholder: "Name" %>
   <%= submit_tag "Enter" %>
 <% end %>

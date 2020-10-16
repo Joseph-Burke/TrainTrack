@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  # skip_before_action :return_to_login_page, only: [:new, :create]
   def new; end
 
   def create

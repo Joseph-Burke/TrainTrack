@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
       @group.avatar.attach(params[:group][:avatar])
       redirect_to group_path(@group)
     else
-      render :new 
+      render :new
     end
   end
 

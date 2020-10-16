@@ -17,6 +17,7 @@ class TransactionsController < ApplicationController
   def create
     redirect_to root_path if session[:user_id].nil?
 
+
     @transaction = Transaction.new(transaction_params.except(:group_ids))
     @transaction.user_id = session[:user_id]
     if @transaction.save
