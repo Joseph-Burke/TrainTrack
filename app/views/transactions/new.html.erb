@@ -8,18 +8,20 @@
 
   <%= form_with(model: @transaction, local: true) do |form| %>
 
-    <div class="field-wrapper">
-      <%= form.label :group_ids, "Group:" %>
+    <% unless @groups.nil? || @groups.empty? %>
+      <div class="field-wrapper groups">
+        <%= form.label :group_ids, "Group:" %>
 
-      <div class="input">
-        <% @groups.each do |group| %>
-          <div class='check_box_option'>
-            <%= form.label :group_ids, group.name %>
-            <%= form.check_box(:group_ids, {multiple: true}, group.id) %>
-          </div>
-        <% end %>
+        <div class="input">
+          <% @groups.each do |group| %>
+            <div class='check_box_option'>
+              <%= form.label :group_ids, group.name %>
+              <%= form.check_box(:group_ids, {multiple: true}, group.id) %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
 
     </br>
 

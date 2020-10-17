@@ -2,7 +2,7 @@
   <h1><%= @group.name %></h1>
   <img 
   class= "image" 
-  src= <%= "#{url_for(@group.avatar)}" %>
+  src= <%= @group.avatar.attached? ? url_for(@group.avatar) : '/paw.png' %>
   >
   <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
 </div>
@@ -10,7 +10,9 @@
 <ul class="transactions-list">
   <% @transactions.each do |transaction| %>
     <div class="card">
-      <img class="image" src= <%= "#{url_for(transaction.user.avatar)}" %> >
+      <img 
+        class="image" 
+        src= <%= "#{url_for(transaction.user.avatar)}" %> >
       <div class="card-body">
         <div class="details">
           <h5><%= transaction.name %></h5>

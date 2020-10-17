@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(name: 'seed_user')
+Group.create(name: 'seed_group')
+Transaction.create(user_id: 1, name: 'seed_transaction', amount: 1, description: 'A seed transaction')

@@ -1,5 +1,5 @@
 RSpec.describe do
-  User.create(name: 'test_user')
-  Group.create(amount_type: 'test_group')
-  Transaction.create(user_id: 1, name: 'test_transaction', amount: 1, description: 'A test transaction')
+  User.first_or_create(name: 'seed_user')
+  Group.first_or_create(name: 'seed_group')
+  Transaction.first_or_create(user_id: 1, name: 'seed_transaction', amount: 1, description: 'A seed transaction')
 end

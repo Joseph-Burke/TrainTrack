@@ -17,17 +17,20 @@ class TransactionsController < ApplicationController
   def create
     redirect_to root_path if session[:user_id].nil?
 
-
     @transaction = Transaction.new(transaction_params.except(:group_ids))
     @transaction.user_id = session[:user_id]
     if @transaction.save
-      GroupTransaction.create(transaction_id: @transaction.id) if params[:transaction][:group_ids].all?('0')
-      params[:transaction][:group_ids].reject { |n| n.to_i.zero? }.each do |id|
-        GroupTransaction.create(group_id: id.to_i, transaction_id: @transaction.id)
+      unless @groups.nil?
+        if params[:transaction][:group_ids].all?('0')
+          GroupTransaction.create(transaction_id: @transaction.id)
+        else
+          params[:transaction][:group_ids].reject { |n| n.to_i.zero? }.each do |id|
+            GroupTransaction.create(transaction_id: @transaction.id, group_id: id.to_i)
+          end
+        end
       end
       redirect_to transaction_path(@transaction)
     else
-      @groups = Group.all
       render :new
     end
   end
