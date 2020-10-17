@@ -19,9 +19,14 @@
   src: url("/Proxima-Nova-Bold.otf");
 }
 
+@font-face {
+  font-family: "Proxima-Nova-Light";
+  src: url("/Proxima-Nova-Light.otf");
+}
+
 html {
   font-size: 20px;
-  font-family: "Proxima-Nova-Bold", serif;
+  font-family: "Proxima-Nova-Light", serif;
 
   body {
     margin: 0;

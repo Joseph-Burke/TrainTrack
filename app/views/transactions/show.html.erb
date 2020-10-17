@@ -8,11 +8,10 @@
   <div class="transaction-card">
     <div class="header">
       <div class="title-wrapper">
-        <% if @transaction.groups.empty? %>
-          <img class="image" src="https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg">
-        <% else %>
-          <img class="image" src= <%= "#{url_for(@transaction.groups.first.avatar)}" %>>
-        <% end%>
+        <img 
+        class="image" 
+        src= <%= @transaction.groups.empty? ? "/paw.png" : url_for(@transaction.groups.first.avatar) %>
+        >
         <h2 class="title"><%= @transaction.name %></h2>
       </div>
       <p class="description"><%= @transaction.description %></p>

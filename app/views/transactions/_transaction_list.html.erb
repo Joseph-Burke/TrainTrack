@@ -1,38 +1,40 @@
 <div class="transactions-total">
   <h3>Transactions Total:</h3>
-  <span><%= @total_transactions_value %></span>
+  <span><%= "#{@total_transactions_value} hours" %></span>
 </div>
 
-<ul class="transactions-list">
-  <% @transactions.each do |transaction| %>
-    <div class="card">
-    <img 
-      class="image" 
-      src= <%= "#{
-        transaction.groups.empty? ? 'paw.png' : url_for(transaction.groups.first.avatar)
-        }" %>
-      >
-      <div class="card-body">
-        <div class="details">
-          <h5><%= transaction.name %></h5>
-          <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
-        </div>
-        <div class="transaction-amount">
-          <%= "#{transaction.amount} hours" %>
-          <%= button_to "Repeat Transaction",
-          {:controller => "transactions",
-          :action => "create",
-          :transaction=> {
-            name: transaction.name,
-            amount: transaction.amount,
-            description: transaction.description,
-            group_ids: transaction.groups.ids
-          }},
-          {:method=>:post}  
-          %>
+<% unless @transactions.empty? %>
+  <ul class="transactions-list">
+    <% @transactions.each do |transaction| %>
+      <div class="card">
+      <img 
+        class="image" 
+        src= <%= "#{
+          transaction.groups.empty? ? 'paw.png' : url_for(transaction.groups.first.avatar)
+          }" %>
+        >
+        <div class="card-body">
+          <div class="details">
+            <h5><%= transaction.name %></h5>
+            <p><%= transaction.created_at.strftime("%d %b. %Y") %></p>
+          </div>
+          <div class="transaction-amount">
+            <%= "#{transaction.amount} hours" %>
+            <%= button_to "Repeat Transaction",
+            {:controller => "transactions",
+            :action => "create",
+            :transaction=> {
+              name: transaction.name,
+              amount: transaction.amount,
+              description: transaction.description,
+              group_ids: transaction.groups.ids
+            }},
+            {:method=>:post}  
+            %>
 
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+<% end %>
