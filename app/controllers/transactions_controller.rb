@@ -2,7 +2,9 @@ class TransactionsController < ApplicationController
   def index
     redirect_to root_path if session[:user_id].nil?
     @transactions = Transaction.where(user_id: session[:user_id]).includes(groups: [avatar_attachment: :blob])
-    @total_transactions_value = @transactions.sum('amount')
+    @transactions = @transactions.filter { |trans| !trans.groups.empty? }
+    @total_transactions_value = 0
+    @transactions.each { |trans| @total_transactions_value += trans.amount }
   end
 
   def new
@@ -14,14 +16,21 @@ class TransactionsController < ApplicationController
 
   def create
     redirect_to root_path if session[:user_id].nil?
+
     @transaction = Transaction.new(transaction_params.except(:group_ids))
     @transaction.user_id = session[:user_id]
-    @transaction.save
-    GroupTransaction.create(transaction_id: @transaction.id) if params[:transaction][:group_ids].all?('0')
-    params[:transaction][:group_ids].reject { |n| n.to_i.zero? }.each do |id|
-      GroupTransaction.create(group_id: id.to_i, transaction_id: @transaction.id)
+    if @transaction.save
+      if Group.none? || params[:transaction][:group_ids].all?('0')
+        GroupTransaction.create(transaction_id: @transaction.id)
+      else
+        params[:transaction][:group_ids].reject { |n| n.to_i.zero? }.each do |id|
+          GroupTransaction.create(transaction_id: @transaction.id, group_id: id.to_i)
+        end
+      end
+      redirect_to transaction_path(@transaction)
+    else
+      render :new
     end
-    redirect_to transaction_path(@transaction)
   end
 
   def show
@@ -30,9 +39,11 @@ class TransactionsController < ApplicationController
   end
 
   def external_transactions
-    @transactions = Transaction.select do |trans|
+    @transactions = Transaction.includes(%i[groups user]).select do |trans|
       trans.groups.empty? && trans.user.id == session[:user_id]
     end
+    @total_transactions_value = 0
+    @transactions.each { |trans| @total_transactions_value += trans.amount }
   end
 
   private
