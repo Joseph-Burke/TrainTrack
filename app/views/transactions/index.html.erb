@@ -1,0 +1,11 @@
+<div class="transactions-index">  
+  <div class="banner">
+    <h1>Transactions</h1>
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
+  </div>
+
+  <%= render 'transaction_list' %>
+
+  <%= button_to "Create a new transaction", new_transaction_path, method: 'get' %>
+
+</div>

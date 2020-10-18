@@ -1,0 +1,19 @@
+<div class="new-group">
+  <div class="banner">
+    <h1>New Group</h1>
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
+  </div>
+
+  <%= form_with(model: @group) do |form| %>
+    <div class="field-wrapper">
+      <%= form.label :name, "Name:" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field-wrapper">
+      <%= form.label :avatar, "Group Icon:" %>
+      <%= form.file_field :avatar %>
+    </div>
+    <%= form.submit "Create" %>
+  <% end %>
+</div>

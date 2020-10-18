@@ -1,0 +1,31 @@
+<div class="groups-index">
+  <div class="banner">
+    <h1>Groups</h1>
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
+  </div>
+
+  <ul class="groups-list">
+    <% @groups.each do |group| %>
+      <% date = group.created_at.to_date %>
+
+      <div class="card">
+        <% if group.avatar %>
+          <img class="image" src= <%= "#{url_for(group.avatar)}" %>>
+        <% else %>
+          <img class="image" src="https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg">
+        <% end%>
+        
+        <div class="card-body">
+          <div class="details">
+            <h5><%= group.name %></h5>
+            <p><%= "#{format_date(date)}" %></p>
+          </div>
+        </div>
+      </div>
+      
+    <% end %>
+  </ul>
+
+
+  <%= button_to "Create a new group", new_group_path, method: 'get' %>
+</div>

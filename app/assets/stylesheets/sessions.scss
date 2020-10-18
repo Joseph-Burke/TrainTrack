@@ -1,0 +1,30 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding: 0 1.5rem;
+  border-top: 0.3rem solid #ecedef;
+  border-bottom: 0.3rem solid #ecedef;
+  background: white;
+
+  input#name {
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    border: none;
+  }
+
+  input[type='submit'] {
+    padding: 1.5rem 0;
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.new-account-link {
+  text-align: center;
+  font-size: 1.5rem;
+}

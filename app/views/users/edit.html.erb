@@ -1,0 +1,8 @@
+<div class="edit-user">
+  <div class="banner">
+    <h1>Edit User</h1>
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
+  </div>
+
+  <%= render 'form' %>
+</div>

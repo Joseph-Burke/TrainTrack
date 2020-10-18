@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <p></p>
+  <h1>LOGIN</h1>
+  <a href="#"></a>
+</nav>
+
+<%= form_with(url: "/login", method: 'post') do %>
+  <%= text_field_tag :name, nil, placeholder: "Name" %>
+  <%= submit_tag "Enter" %>
+<% end %>
+
+<%= button_to "Log Out", logout_path, method: 'delete' %>
+
+<p class="new-account-link">
+  First time using TrainTrack?
+  <%= link_to "Create an account", new_user_path %>
+</p>

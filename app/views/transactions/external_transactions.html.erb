@@ -1,0 +1,8 @@
+<div class="external-transactions">  
+  <div class="banner">
+    <%= link_to "Return to your profile", user_path(User.find(session[:user_id])), class: "profile-link" %>
+    <h1>External Transactions</h1>
+  </div>
+  <%= render 'transaction_list' %>
+  <%= button_to "Create a new transaction", new_transaction_path, method: 'get' %>
+</div>

@@ -1,0 +1,32 @@
+<div class="users-index">
+  <div class="banner">
+    <h1>Users</h1>
+  </div>
+
+  <ul class="users-list">
+    <% @users.each do |user| %>
+
+      <div class="card">
+      <img 
+        class="image" 
+        src= <%=
+          if user.avatar 
+            "#{url_for(user.avatar)}" 
+          else "https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg"
+          end %>
+        >
+        
+        <div class="card-body">
+          <div class="details">
+            <h5><%= user.name %></h5>
+          </div>
+        </div>
+      </div>
+      
+    <% end %>
+  </ul>
+
+
+
+
+</div>
