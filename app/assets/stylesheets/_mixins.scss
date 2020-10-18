@@ -9,10 +9,15 @@
     margin: 1rem;
     display: flex;
     background: #fff;
+    box-shadow:
+      3px 3px rgba(200, 200, 200, 0.2),
+      3px -3px rgba(200, 200, 200, 0.2),
+      -3px -3px rgba(200, 200, 200, 0.2),
+      -3px 3px rgba(200, 200, 200, 0.2);
 
     .image {
-      height: 110px;
-      width: 110px;
+      height: 125px;
+      width: 125px;
     }
 
     .card-body {
@@ -33,8 +38,10 @@
         }
 
         h5 {
-          margin-top: 1rem;
-          font-weight: 200;
+          margin-top: 1.2rem;
+          margin-bottom: 1rem;
+          font-family: "Proxima-Nova-Light", serif;
+          font-size: 1.5rem;
         }
 
         p {
