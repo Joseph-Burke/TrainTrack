@@ -10,7 +10,7 @@
       <div class="title-wrapper">
         <img 
         class="image" 
-        src= <%= @transaction.groups.empty? ? "/paw.png" : url_for(@transaction.groups.first.avatar) %>
+        src= <%= @transaction.groups.empty? || !@transaction.groups.first.avatar.attached? ? "/paw.png" : url_for(@transaction.groups.first.avatar) %>
         >
         <h2 class="title"><%= @transaction.name %></h2>
       </div>

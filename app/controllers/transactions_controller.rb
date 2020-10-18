@@ -20,13 +20,11 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params.except(:group_ids))
     @transaction.user_id = session[:user_id]
     if @transaction.save
-      unless @groups.nil?
-        if params[:transaction][:group_ids].all?('0')
-          GroupTransaction.create(transaction_id: @transaction.id)
-        else
-          params[:transaction][:group_ids].reject { |n| n.to_i.zero? }.each do |id|
-            GroupTransaction.create(transaction_id: @transaction.id, group_id: id.to_i)
-          end
+      if Group.none? || params[:transaction][:group_ids].all?('0')
+        GroupTransaction.create(transaction_id: @transaction.id)
+      else
+        params[:transaction][:group_ids].reject { |n| n.to_i.zero? }.each do |id|
+          GroupTransaction.create(transaction_id: @transaction.id, group_id: id.to_i)
         end
       end
       redirect_to transaction_path(@transaction)
