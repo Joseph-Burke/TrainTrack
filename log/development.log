@@ -31694,3 +31694,63 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 27ms (Views: 11.9ms | ActiveRecord: 4.6ms | Allocations: 11021)
 
 
+Started GET "/" for ::1 at 2020-10-18 20:37:58 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 10532)
+
+
+Started GET "/" for ::1 at 2020-10-18 20:38:00 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 354)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5204)
+
+
+Started POST "/login" for ::1 at 2020-10-18 20:38:07 +0100
+Processing by SessionsController#create as JS
+  Parameters: {"authenticity_token"=>"hExffG2Tym4KOlPlBou2nOsfM3Z55FXcC5MLzZkhr0Tg5HL5l80beCl+AeAsTOcZ5VoAAXDc+ThGwgAA0v2m8w==", "name"=>"Joe", "commit"=>"Enter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Joe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 200 OK in 26ms (ActiveRecord: 4.2ms | Allocations: 6606)
+
+
+Started GET "/users/2" for ::1 at 2020-10-18 20:38:07 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:21:in `reject'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 77.3ms | Allocations: 22307)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 76.0ms | ActiveRecord: 10.7ms | Allocations: 37305)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--68a510f4a7407bcd3f17e8adde8f70fa944751c7/Bogota%CC%81.jpg" for ::1 at 2020-10-18 20:38:07 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--68a510f4a7407bcd3f17e8adde8f70fa944751c7", "filename"=>"Bogotá"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (9.8ms) [0m[34mGenerated URL for file at key: epzqio8gbkptyxb0ephvg7wy26bb (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaWEI2Y1dsdk9HZGlhM0IwZVhoaU1HVndhSFpuTjNkNU1qWmlZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU0dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKdloyOTBZU1V6Umk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMEp2WjI5MFlTVkRReVU0TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEwLTE4VDE5OjQzOjA3LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c584d87d89e10edf91dd5315a48926fca8f06241/Bogota%CC%81.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22Bogota%253F.jpg%22%3B+filename%2A%3DUTF-8%27%27Bogota%25CC%2581.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaWEI2Y1dsdk9HZGlhM0IwZVhoaU1HVndhSFpuTjNkNU1qWmlZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU0dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKdloyOTBZU1V6Umk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMEp2WjI5MFlTVkRReVU0TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEwLTE4VDE5OjQzOjA3LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c584d87d89e10edf91dd5315a48926fca8f06241/Bogota%CC%81.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22Bogota%253F.jpg%22%3B+filename%2A%3DUTF-8%27%27Bogota%25CC%2581.jpg
+Completed 302 Found in 16ms (ActiveRecord: 0.4ms | Allocations: 4536)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaWEI2Y1dsdk9HZGlhM0IwZVhoaU1HVndhSFpuTjNkNU1qWmlZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU0dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKdloyOTBZU1V6Umk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMEp2WjI5MFlTVkRReVU0TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEwLTE4VDE5OjQzOjA3LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c584d87d89e10edf91dd5315a48926fca8f06241/Bogota%CC%81.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22Bogota%253F.jpg%22%3B+filename%2A%3DUTF-8%27%27Bogota%25CC%2581.jpg" for ::1 at 2020-10-18 20:38:07 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"Bogota%3F.jpg\"; filename*=UTF-8''Bogota%CC%81.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaWEI2Y1dsdk9HZGlhM0IwZVhoaU1HVndhSFpuTjNkNU1qWmlZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU0dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKdloyOTBZU1V6Umk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMEp2WjI5MFlTVkRReVU0TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEwLTE4VDE5OjQzOjA3LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c584d87d89e10edf91dd5315a48926fca8f06241", "filename"=>"Bogotá"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 679)
+
+
