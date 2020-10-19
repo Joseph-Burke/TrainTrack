@@ -11,6 +11,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params.except(:avatar))
+    @group.user_id = session[:user_id]
 
     if @group.save
       @group.avatar.attach(params[:group][:avatar])
