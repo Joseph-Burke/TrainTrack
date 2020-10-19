@@ -7,7 +7,7 @@ class TransactionsController < ApplicationController
     @transactions.each { |trans| @total_transactions_value += trans.amount }
   end
 
-def new
+  def new
     redirect_to root_path if session[:user_id].nil?
     user = User.find(session[:user_id])
     @transaction = user.transactions.build

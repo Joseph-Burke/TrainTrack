@@ -57,7 +57,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # MANUALLY-ADDED GEMS
 # Rubocop
 gem 'bullet'
-gem 'byebug'
 gem 'date'
 gem 'pry'
 gem 'rubocop', '~>0.81.0'

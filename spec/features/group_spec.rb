@@ -1,6 +1,4 @@
 require 'rails_helper'
-require 'pry'
-require 'byebug'
 
 RSpec.feature 'Groups', type: :feature do
   it 'creates a new group' do
