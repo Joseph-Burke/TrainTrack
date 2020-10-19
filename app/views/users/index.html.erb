@@ -10,7 +10,7 @@
       <img 
         class="image" 
         src= <%=
-          if user.avatar 
+          if user.avatar.attached?
             "#{url_for(user.avatar)}" 
           else "https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg"
           end %>

@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  # skip_before_action :return_to_login_page, only: [:new, :create]
   def new; end
 
   def create
@@ -11,5 +10,6 @@ class SessionsController < ApplicationController
   def destroy
     redirect_to root_path if session[:user_id].nil?
     session[:user_id] = nil
+    redirect_to root_path
   end
 end

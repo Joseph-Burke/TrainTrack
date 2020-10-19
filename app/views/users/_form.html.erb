@@ -1,4 +1,4 @@
-<%= form_with(model: @user) do |form| %>
+<%= form_with(model: @user, local: true) do |form| %>
   <div class="field-wrapper">
     <%= form.label :name, "Name:" %>
     <%= form.text_field :name %>
@@ -10,4 +10,15 @@
   </div>
 
   <%= form.submit "Submit" %>
+<% end %>
+
+<% if @user.errors.any?%>
+  <div class="errors">
+    <h3>Whoops! User could not be created due to the following <% pluralize(@user.errors.count, "reason") %>:</h3>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= "#{msg}." %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>

@@ -9,18 +9,19 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create!(user_params)
-    session[:user_id] = user.id
-    user.avatar.attach(params[:user][:avatar])
-    redirect_to user_path(user)
+    @user = User.new(user_params.except(:avatar))
+    if @user.save
+      session[:user_id] = @user.id
+      @user.avatar.attach(params[:user][:avatar])
+      redirect_to user_path(@user)
+    else
+      render :new
+    end
   end
 
   def show
     redirect_to root_path if session[:user_id].nil?
     @user = User.find(params[:id])
-    @transactions = Transaction.where(user_id: @user.id).reject(&:nil?)
-    @external_transactions = Transaction.where(user_id: @user.id).select(&:nil?)
-    @groups = Group.all
   end
 
   def update
