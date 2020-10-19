@@ -1,19 +1,20 @@
 require 'rails_helper'
+require 'pry'
+require 'byebug'
 
 RSpec.feature 'Groups', type: :feature do
   it 'creates a new group' do
-    expect(Group.last.name).not_to eql 'test_group'
     visit 'login'
     within '#login-form' do
       fill_in 'Name', with: 'seed_user'
       click_button 'Enter'
     end
-    click_link 'Groups'
-    click_button 'Create a new group'
+    visit new_group_path
     within '.new-group form' do
       fill_in 'Name', with: 'test_group'
       click_button 'Create'
     end
     expect(Group.last.name).to eql 'test_group'
+    expect(Group.last.user_id).to eql User.find_by_name('seed_user').id
   end
 end

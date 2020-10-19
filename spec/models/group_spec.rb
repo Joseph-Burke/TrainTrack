@@ -4,7 +4,8 @@ RSpec.describe Group, type: :model do
   context 'validation' do
     subject do
       described_class.new(
-        name: 'Exercise'
+        name: 'Exercise',
+        user_id: 1
       )
     end
 
@@ -18,7 +19,7 @@ RSpec.describe Group, type: :model do
     end
 
     it 'is invalid with a non-unique name' do
-      Group.create(name: 'A Taken Group Name')
+      Group.create(name: 'A Taken Group Name', user_id: 1)
       subject.name = Group.last.name
       expect(subject).not_to be_valid
     end
