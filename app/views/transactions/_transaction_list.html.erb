@@ -27,7 +27,7 @@
               name: transaction.name,
               amount: transaction.amount,
               description: transaction.description,
-              group_ids: transaction.groups.ids
+              group_ids: transaction.groups.empty? ? [0] : transaction.groups.ids
             }},
             {:method=>:post}  
             %>
