@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'Users', type: :feature do
   it 'creates a new user' do
     visit 'users/new'
-    expect(page).to have_content('Sign Up')
+    expect(page).to have_content('REGISTER')
     within('.new-user form') do
       fill_in 'Name', with: 'Test User'
     end

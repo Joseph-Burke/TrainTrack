@@ -5,9 +5,9 @@ RSpec.feature 'Transactions', type: :feature do
     visit 'login'
     within '#login-form' do
       fill_in 'Name', with: 'seed_user'
+      click_button 'Enter'
     end
     visit new_transaction_path
-    click_button 'Create a new transaction'
     within 'form' do
       fill_in 'Name', with: 'test_transaction'
       fill_in 'Amount', with: '1'
@@ -29,7 +29,7 @@ RSpec.feature 'Transactions', type: :feature do
     end
     click_button 'Enter'
     click_link 'External Transactions'
-    expect(page).to have_content 'External Transactions'
+    expect(page).to have_content 'EXTERNAL TRANSACTIONS'
     expect(page).to have_content 'seed_transaction'
   end
 end
